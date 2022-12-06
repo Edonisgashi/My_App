@@ -1,0 +1,108 @@
+{
+  "books": [
+    {
+      "title": "9-Nov",
+      "author": "Colleen Hoover",
+      "price": 11.0,
+      "src": "https://cdn.shopify.com/s/files/1/0559/3658/1686/products/1655500493_luvbooks_580x.jpg?v=1655501202",
+      "qty": 306,
+      "publisher": "Simon & Schuster Ltd",
+      "year": 2015,
+      "dimensions": "199 x 134 x 24",
+      "description": "Fallon meets Ben, an aspiring novelist, the day before her scheduled cross-country move. Their untimely attraction leads them to spend Fallon's last day in L.A. together, and her eventful life becomes the creative inspiration Ben has always sought for his novel. Over time and amidst the various relationships and tribulations of their own separate lives, they continue to meet on the same date every year. Until one day Fallon becomes unsure if Ben has been telling her the truth or fabricating a perfect reality for the sake of the ultimate plot twist. Can Ben's relationship with Fallon - and simultaneously his novel - be considered a love story if it ends in heartbreak ? ",
+      "ISBN": 978184749352
+    },
+    {
+      "title": "21 Lessons For The 21st Century",
+      "author": "Yuval Noah Harari",
+      "price": 12.9,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294073/9781784708283.jpg",
+      "qty": 306,
+      "publisher": "Vintage Publishing",
+      "year": 2019,
+      "dimensions": "129 x 196 x 33",
+      "ISBN": 978184749351
+    },
+    {
+      "title": "Homo Deus A Brief Story Of Tomorrow",
+      "author": "Yuval Noah Harari",
+      "price": 13.0,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294051/9781784703936.jpg",
+      "qty": 306,
+      "publisher": "Vintage Publishing",
+      "year": 2017,
+      "dimensions": " 130 x 197 x 40",
+      "description": "Homo Deus explores the projects, dreams and nightmares that will shape the twenty-first century and beyond - from overcoming death to creating artificial life. It asks the fundamental questions: how can we protect this fragile world from our own destructive power?"
+    },
+    {
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "price": 32.4,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294293/9781786141675.jpg",
+      "qty": 306,
+      "publisher": "Cornerstone",
+      "year": 2018,
+      "dimensions": "140 x 141 x 35",
+      "ISBN": 978184749352999,
+      "description": "100,000 years ago, at least six human species inhabited the earth. In Sapiens, Dr Yuval Noah Harari spans the whole of human history, from the very first humans to walk the earth to the radical - and sometimes devastating - breakthroughs of the Cognitive, Agricultural and Scientific Revolutions."
+    },
+    {
+      "title": "A Farewell To Arms",
+      "author": "Ernest Hemingway",
+      "price": 10.0,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1286565/9780099273974.jpg",
+      "qty": 306,
+      "publisher": "Vintage Publishing",
+      "year": 1999,
+      "dimensions": "198 x 129 x 17",
+      "ISBN": 9781847003521,
+      "description": "If you loved BBC4's Hemingway, rediscover Ernest's Hemingway's powerful autobiographical story of war. In 1918, Ernest Hemingway went to war. He volunteered for ambulance service in Italy, was wounded and twice decorated."
+    },
+    {
+      "title": "Beyond Good And Evil",
+      "author": "Friedrich Nietzsche",
+      "price": 11.75,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287667/9780199537075.jpg",
+      "qty": 306,
+      "publisher": "Oxford University Press",
+      "year": 1886,
+      "dimensions": "198 x 129 x 17",
+      "ISBN": 9781847112521
+    },
+    {
+      "title": "Dearest Father",
+      "author": "Franz Kafka",
+      "price": 10.45,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1295002/9781847497048.jpg",
+      "qty": 306,
+      "publisher": "Alma Books Ltd",
+      "year": 1886,
+      "dimensions": "198 x 129 x 17",
+      "ISBN": 9781847423521
+    },
+    {
+      "title": "Metamorphoses & Other Stories",
+      "author": "Franz Kafka",
+      "price": 7.8,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294982/9781847493521.jpg",
+      "qty": 306,
+      "publisher": "Alma Books Ltd",
+      "dimensions": "197 x 131 x 21",
+      "ISBN": 9781847493521,
+      "year": 2014,
+      "description": "One of the masterpieces of twentieth-century world literature, 'The Metamorphosis' is accompanied in this volume by a selection of other classic tales and sketches by Kafka - such as 'The Judgement', 'In the Penal Colony' and 'A Country Doctor' - all presented in a lively and meticulous new translation by Christopher Moncrieff."
+    },
+    {
+      "title": "The Trial",
+      "author": "Franz Kafka",
+      "price": 14.55,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1293180/9781529021073.jpg",
+      "qty": 306,
+      "publisher": "Pan Macmillan",
+      "dimensions": "102 x 156 x 19",
+      "ISBN": 9781529021073,
+      "year": 2020,
+      "description": "Kafka's famous psychological horror story of a man arrested and charged for no crime and his struggle against a faceless state"
+    }
+  ]
+}
