@@ -23,7 +23,27 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+footer {
+  background-color: #434242;
+  margin: 0;
+  padding: 3.9rem;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
+  box-shadow: 1px -1px 5px #434942;
+}
+
+.icon--group {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin: 20px 40px;
+}
+.icon--group > * {
+  transform: scale(2);
+}
 .App-link {
   color: #61dafb;
 }
@@ -60,4 +80,16 @@
 }
 .inner:hover img {
   transform: scale(1.2);
+}
+.author--container {
+  font-family: "Playfair Display", serif;
+  background-color: #eaeaea;
+  letter-spacing: 0.13rem;
+  border: 1px solid rgb(72, 52, 52);
+  width: 70%;
+  margin: 30px auto;
+  padding: 50px;
+}
+.author--container h2 {
+  margin-bottom: 40px;
 }

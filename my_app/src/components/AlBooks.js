@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Header from "./Header";
 import { Button } from "react-bootstrap";
-import { BiArrowFromLeft } from "react-icons/bi";
 import { Link, useRoutes } from "react-router-dom";
-import Header from "./components/Header";
-import Slider from "./components/Slider";
-import Footer from "./components/Footer";
-import "./App.css";
-
-const App = () => {
-  const [book, setBook] = useState([]);
-  const [loaded, setLoader] = useState(false);
+import Footer from "./Footer";
+const AlBooks = () => {
+  const [alBook, setAlBook] = useState([]);
+  const [loader, setLoader] = useState(false);
   const API = "http://localhost:3000/books";
 
   const fetchData = async () => {
@@ -17,23 +13,23 @@ const App = () => {
       .then((retrieved) => retrieved.json())
       .then((retrDt) => {
         console.log(retrDt);
-        setBook(retrDt);
+        setAlBook(retrDt);
         setLoader(true);
       })
       .catch((err) => console.log(err));
   };
-
   useEffect(() => {
     fetchData();
   }, []);
+  const alBooks = alBook.filter((el) => el.language === "AL");
+
   return (
     <>
       <Header />
-      <Slider />
 
       <div className="cardContainer">
-        {loaded
-          ? book.map((el, i) => {
+        {loader
+          ? alBooks.map((el, i) => {
               return (
                 <div className="card text-center " key={i}>
                   <div className="inner">
@@ -54,7 +50,6 @@ const App = () => {
 
                     <Button variant="outline-danger">Add to cart</Button>
                     <Link to="/product">
-                      {" "}
                       <Button variant="outline-success">Details</Button>
                     </Link>
                   </div>
@@ -68,4 +63,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AlBooks;
