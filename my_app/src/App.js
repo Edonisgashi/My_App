@@ -55,7 +55,9 @@ const App = () => {
                     <Button variant="outline-danger">Add to cart</Button>
                     <Link to="/product">
                       {" "}
-                      <Button variant="outline-success">Details</Button>
+                      <Button variant="outline-success">
+                        Details <BiArrowFromLeft />
+                      </Button>
                     </Link>
                   </div>
                 </div>

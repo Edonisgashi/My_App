@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Edonis",
+      "lastName": "Gashi",
+      "role": "admin",
+      "email": "edonisgashi@outlook.com",
+      "username": "edonisgashi",
+      "password": "123456789"
+    },
+    {
+      "id": "226505",
+      "firstName": "Nebih",
+      "lastName": "Miftari",
+      "role": "user",
+      "email": "nebihmiftari@example.com",
+      "username": "nebihmiftari",
+      "password": "11111111"
+    },
+    {
+      "id": "807031",
+      "firstName": "Vigan",
+      "lastName": "Berisha",
+      "role": "user",
+      "email": "viganberisha@example.com",
+      "username": "viganberisha",
+      "password": "00000000"
+    },
+    {
+      "id": "839343",
+      "firstName": "Florind",
+      "lastName": "Latifi",
+      "role": "user",
+      "email": "florindlatifi@example.com",
+      "username": "florindlatifi",
+      "password": "00000000"
+    },
+    {
+      "id": "237200",
+      "firstName": "",
+      "lastName": "",
+      "role": "user",
+      "email": "",
+      "username": "",
+      "password": ""
+    }
+  ]
+}

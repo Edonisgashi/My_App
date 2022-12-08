@@ -21,6 +21,7 @@ const EnBooks = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
   const enBooks = enBook.filter((el) => el.language === "EN");
 
   return (

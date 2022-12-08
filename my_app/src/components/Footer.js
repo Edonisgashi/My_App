@@ -1,5 +1,5 @@
 import React from "react";
-import { GiBeachBag } from "react-icons/gi";
+import { BsBook } from "react-icons/bs";
 import {
   AiOutlineMail,
   AiFillPhone,
@@ -11,15 +11,23 @@ import {
 const Footer = () => {
   return (
     <>
-      <h1 className="h1">
-        <span></span>
-      </h1>
-      <footer>
-        <h2>Your online store for Books</h2>
+      <footer className="d-flex">
+        <div className="logo__copyright d-flex flex-column">
+          <h2 className="h2">
+            <span>
+              {" "}
+              <BsBook />
+            </span>{" "}
+            E-Books
+          </h2>
+          <p className="h6">Copyright &copy; 2022</p>
+        </div>
+
         <div className="icon--group">
-          <AiFillPhone /> <AiOutlineMail /> <AiFillInstagram />
-          <AiOutlineFacebook />
-          <AiFillTwitterCircle />
+          <AiFillPhone className="icon" /> <AiOutlineMail className="icon" />{" "}
+          <AiFillInstagram className="icon" />
+          <AiOutlineFacebook className="icon" />
+          <AiFillTwitterCircle className="icon" />
         </div>
       </footer>
     </>
