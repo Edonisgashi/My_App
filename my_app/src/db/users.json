@@ -35,15 +35,6 @@
       "email": "florindlatifi@example.com",
       "username": "florindlatifi",
       "password": "00000000"
-    },
-    {
-      "id": "237200",
-      "firstName": "",
-      "lastName": "",
-      "role": "user",
-      "email": "",
-      "username": "",
-      "password": ""
     }
   ]
 }

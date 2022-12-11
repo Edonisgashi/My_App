@@ -57,7 +57,7 @@ const Register = () => {
   return (
     <>
       <Header />
-      <div className="register__container d-flex justify-content-around">
+      <div className="register__container d-flex justify-content-around m-5">
         <Form
           onSubmit={(e) => handleSubmit(e)}
           className="m-5 w-25"
@@ -128,23 +128,27 @@ const Register = () => {
               onChange={(e) => setChecked(e.target.checked)}
             />
           </Form.Group>
-          <Button
-            variant="outline-success"
-            type="submit"
-            onClick={(e) => handleClick(e)}
-          >
-            <Link to="/welcome" className="text-decoration-none">
-              {" "}
+
+          <Link to="/welcome" className="text-decoration-none">
+            <Button
+              variant="outline-success"
+              type="submit"
+              onClick={(e) => handleClick(e)}
+            >
               Create an Account
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Form>
-        <div className="countUp__content d-flex flex-column my-auto align-items-center">
+        <div
+          className="countUp__content d-flex flex-column my-auto align-items-center justify-content-around "
+          style={{ fontFamily: "'Zen Dots', cursive" }}
+        >
           <CountUp
             className="text-primary h2 font-weight-bold"
             start={0}
-            end={160527}
-            duration={3.75}
+            end={1605555}
+            duration={6.75}
+            separator="."
           ></CountUp>
           <h2 className="text-primary">Happy Clients Worldwide</h2>
           <CountUp
@@ -154,6 +158,10 @@ const Register = () => {
             duration={2.75}
           ></CountUp>
           <h2 className="text-success">States Shiping on</h2>
+          <img
+            src="https://images.unsplash.com/photo-1589519160142-7d1a51b43eaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            className="img-fluid w-50 my-5 shadow-lg"
+          />
         </div>
       </div>
       <Footer />

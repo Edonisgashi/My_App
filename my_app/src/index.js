@@ -20,13 +20,14 @@ import EnBooks from "./components/EnBooks";
 import AlBooks from "./components/AlBooks";
 import Authors from "./components/Authors";
 import NoMatch from "./components/NoMatch";
-
+import Login from "./components/Login";
 import Register from "./components/Register";
 import "./App.css";
 import "./index.css";
+import AddABook from "./components/AddABook";
+import Dashboard from "./components/Dashboard";
 
 const Index = () => {
-  const userID = useParams();
   return (
     <>
       <HashRouter>
@@ -36,8 +37,12 @@ const Index = () => {
           <Route path="/albooks" element={<AlBooks />} />
           <Route path="/author" element={<Authors />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Register />} />
+          <Route path="/newbook" element={<AddABook />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/login" element={<Login />} />
+
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </HashRouter>

@@ -1,34 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 
-const Product = () => {
-  const [book, setBook] = useState();
-  const [load, setLoad] = useState(false);
-
-  const API = "http://localhost:3000/books";
-  const getID = (e, id) => {
-    e.preventDefault();
-    console.log(id);
-    const getData = async () => {
-      await fetch(`${API}/${id}`, {
-        method: "GET",
+const Product = (props) => {
+  const [product, setProduct] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+  const API = " http://localhost:3000/books";
+  const getData = async () => {
+    await fetch(`${API}/${props.id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setLoaded(true);
+        setProduct(data);
+        console.log(data);
       })
-        .then((resp) => resp.json())
-        .then((data) => {
-          console.log(data);
-          setBook(data);
-          setLoad(true);
-        })
-        .then((data) => console.log(data));
-    };
-
-    getData();
-    console.log(book);
+      .catch((error) => console.log(error));
   };
-  return (
-    <div>
-      <h1> Hello </h1>
-    </div>
-  );
+
+  useEffect(() => {
+    getData();
+  }, [props.id]);
+
+  console.log(product);
 };
 
 export default Product;

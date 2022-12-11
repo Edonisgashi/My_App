@@ -2,7 +2,6 @@
   "books": [
     {
       "title": "21 Lessons For The 21st Century",
-
       "price": 12.9,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294073/9781784708283.jpg",
       "qty": 306,
@@ -17,8 +16,23 @@
       }
     },
     {
+      "title": "Ne te dy si nje roman",
+      "price": 10.9,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1298329/9789928216069.jpg",
+      "qty": 306,
+      "publisher": "Living",
+      "year": 2016,
+      "dimensions": "119 x 196 x 33",
+      "description": "Në epokën e teknologjisë moderne, kur bota gëlon nga interneti dhe celularët, Ema dhe Frederiku bëjnë një pakt: do t’i shkruajnë letra njëri-tjetrit dhe do të takohen vetëm një herë në vit në brigjet e Bretanjës. Letrat e tyre do të ndërthuren me një katalog të rrallë titujsh dhe personazhesh, një udhëzues i vyer librash për të mos u humbur dhe do të na mësojnë se dashuria e vërtetë triumfon në çdo kohë. Pas suksesit të jashtëzakonshëm në Gjermani, Itali, Francë e shumë vende të tjera, libri “Ne të dy si një roman”, i autores italiane Paola Calvetti, vjen edhe në shqip, vetëm nga Botimet Living.",
+      "id": 9789928216069,
+      "language": "AL",
+      "author": {
+        "authorName": "Paola Calvetti",
+        "aboutAuthor": ""
+      }
+    },
+    {
       "title": "Kange Popullore Erotike",
-
       "price": 15.9,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1299487/9789951270205.jpg",
       "qty": 306,
@@ -27,7 +41,6 @@
       "dimensions": "129 x 196 x 33",
       "id": 9789951270205,
       "language": "AL",
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Vlora Nikci"
@@ -35,7 +48,6 @@
     },
     {
       "title": "Homo Deus A Brief Story Of Tomorrow",
-
       "price": 13,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294051/9781784703936.jpg",
       "qty": 306,
@@ -45,16 +57,13 @@
       "id": 978935100000,
       "dimensions": " 130 x 197 x 40",
       "description": "Homo Deus explores the projects, dreams and nightmares that will shape the twenty-first century and beyond - from overcoming death to creating artificial life. It asks the fundamental questions: how can we protect this fragile world from our own destructive power?",
-
       "author": {
         "authorName": "Yuval Noah Harari",
         "aboutAuthor": "Prof. Yuval Noah Harari is a historian, philosopher, and the bestselling author of Sapiens: A Brief History of Humankind, Homo Deus: A Brief History of Tomorrow, 21 Lessons for the 21st Century, and Sapiens: A Graphic History. His books have sold over 40 million copies in 65 languages, and he is considered one of the world’s most influential public intellectuals today. Born in Israel in 1976, Harari received his Ph.D. from the University of Oxford in 2002 and is currently a lecturer at the Department of History in the Hebrew University of Jerusalem. In 2019, following the international success of his books, Yuval Noah Harari co-founded Sapienship with his husband and original agent, Itzik Yahav.  Sapienship is a social impact company with projects in the fields of entertainment and education, whose main goal is to focus the public conversation on the most important global challenges facing the world today."
       }
     },
-
     {
       "title": "Sapiens",
-
       "price": 32.4,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294293/9781786141675.jpg",
       "qty": 306,
@@ -71,7 +80,6 @@
     },
     {
       "title": "A Farewell To Arms",
-
       "price": 10,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1286565/9780099273974.jpg",
       "qty": 306,
@@ -81,7 +89,6 @@
       "dimensions": "198 x 129 x 17",
       "id": 9781847003521,
       "description": "If you loved BBC4's Hemingway, rediscover Ernest's Hemingway's powerful autobiographical story of war. In 1918, Ernest Hemingway went to war. He volunteered for ambulance service in Italy, was wounded and twice decorated.",
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Ernest Hemingway"
@@ -104,7 +111,6 @@
     },
     {
       "title": "Dearest Father",
-
       "price": 10.45,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1295002/9781847497048.jpg",
       "qty": 306,
@@ -120,7 +126,6 @@
     },
     {
       "title": "Lahuta e Malcis",
-
       "price": 19.55,
       "language": "AL",
       "src": "https://b3c4r2f7.stackpathcdn.com/6372-large_default/lahuta-e-malcis.jpg",
@@ -129,7 +134,6 @@
       "dimensions": "226 x 284 x 15",
       "id": 9789951065887,
       "year": 2000,
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Gjergj Fishta"
@@ -137,7 +141,6 @@
     },
     {
       "title": "Metamorphoses & Other Stories",
-
       "price": 7.8,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294982/9781847493521.jpg",
       "qty": 306,
@@ -147,7 +150,6 @@
       "language": "EN",
       "year": 2014,
       "description": "One of the masterpieces of twentieth-century world literature, 'The Metamorphosis' is accompanied in this volume by a selection of other classic tales and sketches by Kafka - such as 'The Judgement', 'In the Penal Colony' and 'A Country Doctor' - all presented in a lively and meticulous new translation by Christopher Moncrieff.",
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Franz Kafka"
@@ -155,7 +157,6 @@
     },
     {
       "title": "The Trial",
-
       "price": 14.55,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1293180/9781529021073.jpg",
       "qty": 306,
@@ -165,7 +166,6 @@
       "year": 2020,
       "language": "EN",
       "description": "Kafka's famous psychological horror story of a man arrested and charged for no crime and his struggle against a faceless state",
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Franz Kafka"
@@ -173,7 +173,6 @@
     },
     {
       "title": "100 Women Who Made History",
-
       "price": 19.55,
       "language": "EN",
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287845/9780241257241.jpg",
@@ -182,10 +181,89 @@
       "dimensions": "226 x 284 x 15",
       "id": 9780241257241,
       "year": 2017,
-
       "author": {
         "aboutAuthor": "",
         "authorName": "Hardback"
+      }
+    },
+    {
+      "title": "100 Songs",
+      "price": 22.3,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1292233/9781471167164.jpg",
+      "qty": 306,
+      "publisher": "Simon & Schuster Ltd",
+      "year": "2017",
+      "dimensions": " 154 x 233 x 17",
+      "id": "1435950910719",
+      "description": "A portable, abridged volume of Dylan's lyrics, from the beginning of his career through to the present day.",
+      "language": "EN",
+      "author": {
+        "authorName": "Bob Dylan",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Kosova 1 5 Komplet",
+      "price": 63.5,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1284787/0000000000329.jpg",
+      "qty": 306,
+      "publisher": "Faik Konica",
+      "year": "2021",
+      "dimensions": "",
+      "id": "2669267015284",
+      "description": "“Kosova” është titulli i cili është bërë gati për publikun në pesë vëllime, nga shkrimtari dhe historiani Jusuf Buxhovi. Aty lexuesit do të gjejnë përfundime dhe konstatime të rëndësishme për historinë e shqiptarëve, sidomos për pjesën e lashtësisë.",
+      "language": "AL",
+      "author": {
+        "authorName": "Jusuf Buxhovi",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Mrizi i Zanave",
+      "price": 4.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1302435/9789995697617.jpg",
+      "qty": 306,
+      "publisher": "Uegen",
+      "year": "2021",
+      "dimensions": "129 X 196 X 33",
+      "id": "4192424762933",
+      "description": "",
+      "language": "AL",
+      "author": {
+        "authorName": "Gjergj Fishta",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "War And Peace",
+      "price": 14.55,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287640/9780199232765.jpg",
+      "qty": 306,
+      "publisher": "Oxford University Press",
+      "year": "2010",
+      "dimensions": "196 x 132 x 42",
+      "id": "2356461287468",
+      "description": "Tolstoy's epic masterpiece intertwines the lives of private and public individuals during the time of the Napoleonic wars and the French invasion of Russia. In this revised and updated version of the definitive and highly acclaimed Maude translation, Tolstoy's genius and the power of his prose are made newly available to the contemporary reader.",
+      "language": "EN",
+      "author": {
+        "authorName": "Leo Tolstoy",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Anna Karenina",
+      "price": 12.1,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1286966/9780140449174.jpg",
+      "qty": 306,
+      "publisher": "Penguin Books Ltd",
+      "year": "2003",
+      "dimensions": " 197 x 134 x 47",
+      "id": "3253657090660",
+      "description": "Anna Karenina seems to have everything - beauty, wealth, popularity and an adored son. But she feels that her life is empty until the moment she encounters the impetuous officer Count Vronsky. Their subsequent affair scandalizes society and family alike, and soon brings jealousy and bitterness in its wake.",
+      "language": "EN",
+      "author": {
+        "authorName": "Leo Tolstoy",
+        "aboutAuthor": "Leo Tolstoy, Tolstoy also spelled Tolstoi, Russian in full Lev Nikolayevich, Graf (count) Tolstoy, (born August 28 [September 9, New Style], 1828, Yasnaya Polyana, Tula province, Russian Empire—died November 7 [November 20], 1910, Astapovo, Ryazan province), Russian author, a master of realistic fiction and one of the world’s greatest novelists."
       }
     }
   ]

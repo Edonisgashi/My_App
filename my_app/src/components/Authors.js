@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { matchRoutes } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 const Authors = () => {
   const [author, setAuthor] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -36,8 +36,18 @@ const Authors = () => {
       <Header />
       {uniqueAuthor.map((el, i) => {
         return (
-          <section key={i} className="author--container">
-            <h2>{el.authorName}</h2>
+          <section
+            key={i}
+            className="author--container shadow border-0 rounded my-5 mx-auto p-5"
+          >
+            <h2 className="my-5 text-muted d-flex justify-content-evenly w-50">
+              {" "}
+              <CgProfile
+                style={{ transform: "scale(4.5)" }}
+                className="mx-5 mb-5"
+              />{" "}
+              {el.authorName}
+            </h2>
             <p>{el.aboutAuthor}</p>
           </section>
         );

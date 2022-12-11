@@ -3,6 +3,7 @@ import Header from "./Header";
 import { Button } from "react-bootstrap";
 import { Link, useRoutes } from "react-router-dom";
 import Footer from "./Footer";
+import { BiArrowFromLeft } from "react-icons/bi";
 const AlBooks = () => {
   const [alBook, setAlBook] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -27,11 +28,11 @@ const AlBooks = () => {
     <>
       <Header />
 
-      <div className="cardContainer">
+      <div className="cardContainer  my-5 mx-auto">
         {loader
           ? alBooks.map((el, i) => {
               return (
-                <div className="card text-center " key={i}>
+                <div className="card text-center shadow border-0 " key={i}>
                   <div className="inner">
                     <img
                       className="card-img-top img-fluid "
@@ -46,11 +47,16 @@ const AlBooks = () => {
                     <h2 className="text-muted h5" style={{ fontWeight: 500 }}>
                       {el.author.authorName}
                     </h2>
-                    <h4 className="text-info">{el.price.toFixed(2)}€</h4>
+                    <h4 className="text-info">${el.price.toFixed(2)}</h4>
 
-                    <Button variant="outline-danger">Add to cart</Button>
-                    <Link to="/product">
-                      <Button variant="outline-success">Details</Button>
+                    <Button variant="danger" className="mx-2">
+                      Add to cart
+                    </Button>
+
+                    <Link to="/product/1">
+                      <Button variant="light" className="mx-2">
+                        Details <BiArrowFromLeft />
+                      </Button>
                     </Link>
                   </div>
                 </div>
@@ -58,6 +64,7 @@ const AlBooks = () => {
             })
           : null}
       </div>
+
       <Footer />
     </>
   );
