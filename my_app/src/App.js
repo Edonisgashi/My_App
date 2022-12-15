@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Button } from "react-bootstrap";
-import { BiArrowFromLeft } from "react-icons/bi";
-import { Link, useRoutes } from "react-router-dom";
-import Product from "./components/Product";
+import { NavLink, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
 import BackTop from "./components/BackTop";
+
 import "./App.css";
 
-const App = () => {
+const App = ({ addToCartBtn, selectedProduct, setSelectedProduct }) => {
   const [book, setBook] = useState([]);
   const [loaded, setLoader] = useState(false);
-  const [incomingBook, setIncomingBook] = useState([]);
+  const [loadedBook, setLoadedBook] = useState([]);
   const [bookID, setBookID] = useState();
   const API = "http://localhost:3000/books";
-
+  const navigate = useNavigate();
   const fetchData = async () => {
     const retrievedData = await fetch(API)
       .then((retrieved) => retrieved.json())
@@ -30,23 +29,29 @@ const App = () => {
   useEffect(() => {
     fetchData();
   }, [loaded]);
+
   const showDetails = (e, id) => {
     e.preventDefault();
-    setBookID(id);
-    console.log(id);
 
     fetch(`${API}/${id}`)
       .then((resolved) => resolved.json())
       .then((data) => {
-        setIncomingBook(data);
         console.log(data);
-      });
+        setLoadedBook(data);
+      })
+      .catch((err) => console.log(err));
+
+    console.log(loadedBook);
+    navigate(`/product/${id}`);
   };
+  const objectAsString = JSON.stringify(loadedBook);
+  window.localStorage.setItem("book", objectAsString);
 
   return (
     <>
       <Header />
       <Slider />
+
       <BackTop />
       <div className="cardContainer  my-5 mx-auto">
         {loaded
@@ -60,7 +65,7 @@ const App = () => {
                       alt="Card image cap"
                     ></img>
                   </div>
-                  <div className="card-body">
+                  <div className="card-body d-flex flex-column align-items-center justify-content-between">
                     <h2 className="card-title h4" style={{ fontWeight: 600 }}>
                       {el.title}
                     </h2>
@@ -69,17 +74,24 @@ const App = () => {
                     </h2>
                     <h4 className="text-info">${el.price.toFixed(2)}</h4>
 
-                    <Button variant="danger" className="mx-2 align-self-end">
-                      Add to cart
-                    </Button>
+                    <div className="btns d-flex flex-row">
+                      <Button
+                        variant="danger"
+                        className="mx-2 align-self-end"
+                        onClick={(e) => addToCartBtn(e, el)}
+                      >
+                        Add to cart
+                      </Button>
 
-                    <Button
-                      variant="light"
-                      className="mx-2 align-self-end "
-                      onClick={(e) => showDetails(e, el.id)}
-                    >
-                      Details <BiArrowFromLeft />
-                    </Button>
+                      <NavLink to={`/product/${el.id}`}>
+                        <button
+                          className="mx-2 align-self-end btn btn-light"
+                          onClick={(e) => showDetails(e, el.id)}
+                        >
+                          Details
+                        </button>
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               );

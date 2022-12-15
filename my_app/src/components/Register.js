@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Welcome from "./Welcome";
 import { Link } from "react-router-dom";
 const Register = () => {
   const [firstName, setFirstName] = useState();

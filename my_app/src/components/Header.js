@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { Nav } from "react-bootstrap";
 import { BsBook } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import {
   HashRouter,
   Route,
@@ -19,7 +20,7 @@ const Header = (props) => {
     window.localStorage.removeItem("isLoggedIn");
   };
 
-  console.log(loggedIn);
+  // console.log(loggedIn);
 
   return (
     <Navbar
@@ -80,6 +81,9 @@ const Header = (props) => {
             </Link>
           </>
         )}
+        <Link to="/cart" className="text-decoration-none  text-light  h2">
+          <AiOutlineShoppingCart />
+        </Link>
       </Container>
     </Navbar>
   );

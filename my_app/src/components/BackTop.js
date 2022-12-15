@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { Button } from "react-bootstrap";
 
 const BackTop = () => {
   const [visible, setVisible] = useState(false);
@@ -24,20 +23,22 @@ const BackTop = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <FaArrowCircleUp
-      onClick={scrollToTop}
-      style={{
-        display: visible ? "inline" : "none",
-        position: "fixed",
-        width: "100%",
-        left: "48%",
-        bottom: "40px",
-        height: "40px",
-        zIndex: 1,
-        cursor: "pointer",
-        color: "#E97777",
-      }}
-    />
+    <>
+      <FaArrowCircleUp
+        onClick={scrollToTop}
+        style={{
+          display: visible ? "inline" : "none",
+          position: "fixed",
+          width: "100%",
+          left: "48%",
+          bottom: "40px",
+          height: "40px",
+          zIndex: 1,
+          cursor: "pointer",
+          color: "#E97777",
+        }}
+      />
+    </>
   );
 };
 
