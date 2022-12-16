@@ -31,7 +31,8 @@ const AddABook = () => {
       publisher: publisher,
       year: year,
       dimensions: dimensions,
-      id: randomId,
+      id: Number(randomId),
+      orderQty: 1,
       description: description,
       language: language,
       author: {

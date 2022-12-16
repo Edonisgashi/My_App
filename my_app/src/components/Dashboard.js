@@ -10,17 +10,8 @@ const Dashboard = () => {
   const [updateRequest, setUpdateRequest] = useState(false);
   const [dataToUpdate, setDataToUpdate] = useState();
   const [bookID, setBookID] = useState();
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [price, setPrice] = useState();
-  const [src, setSrc] = useState("");
-  const [qty, setQty] = useState();
-  const [publisher, setPublisher] = useState("");
-  const [description, setDescription] = useState("");
-  const [year, setYear] = useState();
-  const [dimensions, setDimensions] = useState("");
-  const [language, setLanguage] = useState("");
-  const [aboutAuthor, setAboutAuthor] = useState("");
+
+  // console.log(title);
   const API = "http://localhost:3000/books";
   const fetchData = async () => {
     await fetch(API)
@@ -32,7 +23,9 @@ const Dashboard = () => {
       .catch((error) => console.log(error));
   };
 
-  fetchData();
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   const handleEditBtn = (e, id) => {
     e.preventDefault();
@@ -45,26 +38,13 @@ const Dashboard = () => {
         setDataToUpdate(resp);
       });
   };
-  // console.log(dataToUpdate.title);
+
   const handleUpdateForm = (e) => {
-    const data = {
-      title: title,
-      price: Number(price),
-      src: src,
-      qty: Number(qty),
-      publisher: publisher,
-      year: year,
-      dimensions: dimensions,
-      description: description,
-      language: language,
-      author: {
-        authorName: author,
-        aboutAuthor: aboutAuthor,
-      },
-    };
+    e.preventDefault();
+
     fetch(`${API}/${bookID}`, {
       method: "PUT",
-      body: JSON.stringify(data),
+      body: JSON.stringify(dataToUpdate),
       headers: {
         "Content-Type": "application/json",
       },
@@ -82,6 +62,7 @@ const Dashboard = () => {
       method: "DELETE",
     });
   };
+
   return (
     <div className="w-100" style={{ fontFamily: "'Rubik', sans-serif" }}>
       <Header />
@@ -143,7 +124,7 @@ const Dashboard = () => {
             <h2 className="bg-danger bg-opacity-25 py-3 text-center">
               Update Book
             </h2>
-            <form onClick={(e) => handleUpdateForm(e)}>
+            <form onSubmit={(e) => handleUpdateForm(e)}>
               <div className="form-group p-3 my-1">
                 <label htmlFor="bookTitle">Book Title</label>
                 <input
@@ -154,7 +135,9 @@ const Dashboard = () => {
                   aria-describedby="emailHelp"
                   placeholder="Enter Book Title"
                   required
-                  onChange={(e) => setTitle(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.title = e.target.value;
+                  }}
                 />
               </div>
 
@@ -167,7 +150,9 @@ const Dashboard = () => {
                   value={dataToUpdate.author.authorName}
                   placeholder="Enter Author/s name"
                   required
-                  onChange={(e) => setAuthor(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.author.authorName = e.target.value;
+                  }}
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -181,7 +166,9 @@ const Dashboard = () => {
                   value={dataToUpdate.price}
                   placeholder="Enter Price"
                   required
-                  onChange={(e) => setPrice(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.price = Number(e.target.value);
+                  }}
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -195,7 +182,9 @@ const Dashboard = () => {
                   id="bookYear"
                   placeholder="Enter Year"
                   required
-                  onChange={(e) => setYear(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.year = Number(e.target.value);
+                  }}
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -207,7 +196,9 @@ const Dashboard = () => {
                   value={dataToUpdate.src}
                   placeholder="Enter URL"
                   required
-                  onChange={(e) => setSrc(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.src = e.target.value;
+                  }}
                 />
               </div>
               <div className="form- p-3 my-1">
@@ -215,13 +206,15 @@ const Dashboard = () => {
                 <input
                   type="number"
                   value={dataToUpdate.qty}
-                  min="1"
+                  min="0"
                   step="1"
                   className="form-control my-1"
                   id="bookQty"
                   placeholder="Enter Qty"
                   required
-                  onChange={(e) => setQty(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.qty = Number(e.target.value);
+                  }}
                 />
               </div>
               <div className="form- p-3 my-1">
@@ -232,7 +225,9 @@ const Dashboard = () => {
                   className="form-control my-1"
                   id="bookDescription"
                   placeholder="Description of book"
-                  onChange={(e) => setDescription(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.description = e.target.value;
+                  }}
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -243,7 +238,9 @@ const Dashboard = () => {
                   id="bookPublisher"
                   value={dataToUpdate.publisher}
                   placeholder="Enter Publisher"
-                  onChange={(e) => setPublisher(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.publisher = e.target.value;
+                  }}
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -251,10 +248,12 @@ const Dashboard = () => {
                 <input
                   type="text"
                   className="form-control my-1"
-                  onChange={(e) => setDimensions(e.target.value)}
                   id="bookPublisher"
                   value={dataToUpdate.dimensions}
                   placeholder="E.g 129 x 196 x 33"
+                  onChange={(e) => {
+                    dataToUpdate.dimensions = e.target.value;
+                  }}
                 />
               </div>
               <div className="radios p-3">
@@ -266,7 +265,9 @@ const Dashboard = () => {
                     name="EN"
                     id="EN"
                     value="EN"
-                    onChange={() => setLanguage("EN")}
+                    onChange={() => {
+                      dataToUpdate.language = "EN";
+                    }}
                   />
                   <label className="form-check-label" htmlFor="EN">
                     English
@@ -279,7 +280,9 @@ const Dashboard = () => {
                     name="AL"
                     id="AL"
                     value="AL"
-                    onChange={() => setLanguage("AL")}
+                    onChange={() => {
+                      dataToUpdate.language = "AL";
+                    }}
                   />
                   <label className="form-check-label" htmlFor="AL">
                     Albanian
@@ -288,15 +291,17 @@ const Dashboard = () => {
               </div>
               <div className="form-group p-3 my-1">
                 <label htmlFor="bookAuthorDescription">
-                  Some words htmlFor author{" "}
+                  Some words Author{" "}
                 </label>
                 <input
                   type="text"
                   className="form-control my-1"
                   id="bookAuthorDescription"
-                  value={dataToUpdate.author.aboutAuthor}
+                  value={dataToUpdate.aboutAuthor}
                   placeholder="Enter a quick description about author"
-                  onChange={(e) => setAboutAuthor(e.target.value)}
+                  onChange={(e) => {
+                    dataToUpdate.author.authorName = e.target.value;
+                  }}
                 />
               </div>
 
