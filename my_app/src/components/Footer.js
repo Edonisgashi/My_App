@@ -11,7 +11,10 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="d-flex bg-danger bg-opacity-50  border-0 flex-row p-5 justify-content-around text-light">
+      <footer
+        id="footer"
+        className=" d-md-flex bg-danger bg-opacity-50  border-0 flex-row p-5 justify-content-around text-light"
+      >
         <div className="logo__copyright d-flex flex-column">
           <h2 className="h2">
             <span>

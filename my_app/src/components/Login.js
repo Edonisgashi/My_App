@@ -8,7 +8,7 @@ const Login = () => {
   const [accounts, setAccounts] = useState([]);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [currentUser, setCurrentUser] = useState("");
+  const [currentUser, setCurrentUser] = useState();
   const [loader, setLoader] = useState(false);
 
   const API = " http://localhost:3001/users";
@@ -28,14 +28,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCurrentUser(accounts.find((acc) => acc.username === username));
-    console.log(currentUser);
+    console.log(typeof currentUser);
     if (currentUser.password === password) {
       console.log("Passwords match");
       console.log(currentUser.role);
 
       document.querySelector(".link__login").classList.add("d-none");
       document.querySelector(".link__register").classList.add("d-none");
-      window.localStorage.setItem("isLoggedIn", username);
+      window.localStorage.setItem("isLoggedIn", JSON.stringify(currentUser));
       if (currentUser.role === "admin") {
         document.querySelector(".link__dashboard").classList.remove("d-none");
       } else {

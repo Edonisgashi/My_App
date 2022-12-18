@@ -27,9 +27,7 @@ import Dashboard from "./components/Dashboard";
 import OrderMessage from "./components/OrderMessage";
 
 const Index = () => {
-  const { id } = useParams();
   const [cart, setCart] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const addToCartBtn = (e, item) => {
     console.log(item);
@@ -40,24 +38,21 @@ const Index = () => {
     <>
       <HashRouter>
         <Routes>
+          <Route path="/" element={<App addToCartBtn={addToCartBtn} />} />
           <Route
-            path="/"
-            element={
-              <App
-                addToCartBtn={addToCartBtn}
-                selectedProduct={selectedProduct}
-                setSelectedProduct={setSelectedProduct}
-              />
-            }
+            path="/enbooks"
+            element={<EnBooks addToCartBtn={addToCartBtn} />}
           />
-          <Route path="/enbooks" element={<EnBooks />} />
-          <Route path="/albooks" element={<AlBooks />} />
+          <Route
+            path="/albooks"
+            element={<AlBooks addToCartBtn={addToCartBtn} />}
+          />
           <Route path="/author" element={<Authors />} />
           <Route path="/register" element={<Register />} />
           <Route path="/newbook" element={<AddABook />} />
           <Route
             path="/product/:id"
-            element={<Product selectedProduct={selectedProduct} />}
+            element={<Product addToCartBtn={addToCartBtn} />}
           />
           <Route path="/ordermessage" element={<OrderMessage />} />
           <Route path="/login" element={<Login />} />

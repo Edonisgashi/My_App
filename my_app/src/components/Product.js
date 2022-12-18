@@ -5,7 +5,7 @@ import BackTop from "./BackTop";
 import { useParams } from "react-router-dom";
 const API = "http://localhost:3000/books";
 
-const Product = () => {
+const Product = ({ addToCartBtn }) => {
   const [book, setBook] = useState(null);
   const [loader, setLoader] = useState(false);
   const { id } = useParams();
@@ -33,18 +33,17 @@ const Product = () => {
       <Header />
       <BackTop />
       {loader && book !== null ? (
-        <div className="d-flex  m-5  p-5">
+        <div className="product d-flex  m-5  p-5 w-75">
           <img className="w-25" src={book.src} alt={book.title} />
           <div className="text-muted d-flex flex-column mx-5">
             <h2 className="my-3">{book.title}</h2>
             <h3 className="my-3">{book.author.authorName}</h3>
             <h3 className="mb-3 text-danger">${book.price.toFixed(2)}</h3>
-            <div className="d-flex flex-row align-items-center">
-              <button className="btn btn-outline-danger btn-sm px-3">-</button>
-              <p className="mx-2 my-auto">0</p>
-              <button className="btn btn-outline-success btn-sm px-3">+</button>
-            </div>
-            <button className="btn btn-danger my-4 w-50 shadow-lg">
+
+            <button
+              className="btn btn-danger my-4 w-50 shadow-lg"
+              onClick={(e) => addToCartBtn(e, book)}
+            >
               Add to Cart
             </button>
             <span>Publisher :{book.publisher}</span>

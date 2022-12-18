@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
 import BackTop from "./components/BackTop";
-
+import Cards from "./components/Cards";
 import "./App.css";
 
 const App = ({ addToCartBtn, selectedProduct, setSelectedProduct }) => {
@@ -57,43 +57,12 @@ const App = ({ addToCartBtn, selectedProduct, setSelectedProduct }) => {
         {loaded
           ? book.map((el, i) => {
               return (
-                <div className="card text-center shadow border-0" key={i}>
-                  <div className="inner">
-                    <img
-                      className="card-img-top img-fluid "
-                      src={el.src}
-                      alt="Card image cap"
-                    ></img>
-                  </div>
-                  <div className="card-body d-flex flex-column align-items-center justify-content-between">
-                    <h2 className="card-title h4" style={{ fontWeight: 600 }}>
-                      {el.title}
-                    </h2>
-                    <h2 className="text-muted h5" style={{ fontWeight: 500 }}>
-                      {el.author.authorName}
-                    </h2>
-                    <h4 className="text-info">${el.price.toFixed(2)}</h4>
-
-                    <div className="btns d-flex flex-row">
-                      <Button
-                        variant="danger"
-                        className="mx-2 align-self-end"
-                        onClick={(e) => addToCartBtn(e, el)}
-                      >
-                        Add to cart
-                      </Button>
-
-                      <NavLink to={`/product/${el.id}`}>
-                        <button
-                          className="mx-2 align-self-end btn btn-light"
-                          onClick={(e) => showDetails(e, el.id)}
-                        >
-                          Details
-                        </button>
-                      </NavLink>
-                    </div>
-                  </div>
-                </div>
+                <Cards
+                  book={el}
+                  addToCartBtn={addToCartBtn}
+                  showDetails={showDetails}
+                  key={el.id}
+                />
               );
             })
           : null}

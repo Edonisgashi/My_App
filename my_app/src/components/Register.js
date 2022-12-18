@@ -16,7 +16,9 @@ const Register = () => {
   const [incomingData, setIncomingData] = useState(false);
   const API = "http://localhost:3008/users";
   const randomId = Math.floor(Math.random() * 1000000).toFixed(0);
-
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  console.log(emailRegex);
   const handleSubmit = (e) => {
     e.preventDefault();
     setIncomingData(true);
@@ -37,6 +39,7 @@ const Register = () => {
       username: username,
       password: password,
     };
+
     await fetch(API, {
       method: "POST",
       body: JSON.stringify(data),
@@ -123,20 +126,23 @@ const Register = () => {
               type="checkbox"
               variant="success"
               required
+              checked={checked}
               label="i have read and agree to the terms and conditions"
               onChange={(e) => setChecked(e.target.checked)}
             />
           </Form.Group>
 
-          <Link to="/welcome" className="text-decoration-none">
-            <Button
-              variant="outline-success"
-              type="submit"
-              onClick={(e) => handleClick(e)}
-            >
-              Create an Account
-            </Button>
-          </Link>
+          {checked ? (
+            <Link to="/welcome" className="text-decoration-none">
+              <Button
+                variant="outline-success"
+                type="submit"
+                onClick={(e) => handleClick(e)}
+              >
+                Create an Account
+              </Button>
+            </Link>
+          ) : null}
         </Form>
         <div
           className="countUp__content d-flex flex-column my-auto align-items-center justify-content-around "

@@ -20,13 +20,13 @@ const Header = (props) => {
     window.localStorage.removeItem("isLoggedIn");
   };
 
-  // console.log(loggedIn);
-
+  const currentUser = JSON.parse(loggedIn);
+  console.log(currentUser);
   return (
     <Navbar
       bg="danger"
       variant="danger"
-      className="bg-opacity-75 sticky-top shadow-lg p-3"
+      className="bg-opacity-75 sticky-top shadow-lg p-3 header "
     >
       <Container>
         <Link to="/" className="navbar-brand text-light">
@@ -35,55 +35,57 @@ const Header = (props) => {
             <BsBook /> E-Books
           </h3>
         </Link>
-        <Link to="/enbooks" className="text-decoration-none  text-light">
-          Books in English
-        </Link>
-        <Link className="text-decoration-none  text-light" to="/albooks">
-          Books in Albanian
-        </Link>
-        <Link className="text-decoration-none  text-light" to="/author">
-          Authors
-        </Link>
-        {loggedIn ? (
-          <>
-            {loggedIn === "edonisgashi" ? (
+        <div className="links d-none d-md-flex justify-content-between w-75 align-items-center ">
+          <Link to="/enbooks" className="text-decoration-none  text-light">
+            Books in English
+          </Link>
+          <Link className="text-decoration-none  text-light" to="/albooks">
+            Books in Albanian
+          </Link>
+          <Link className="text-decoration-none  text-light" to="/author">
+            Authors
+          </Link>
+          {currentUser ? (
+            <>
+              {currentUser.role === "admin" ? (
+                <Link
+                  className="text-decoration-none  text-light"
+                  to="/dashboard"
+                >
+                  Dashboard
+                </Link>
+              ) : null}
               <Link
                 className="text-decoration-none  text-light"
-                to="/dashboard"
+                to="/"
+                onClick={signOut}
               >
-                Dashboard
+                Log out
               </Link>
-            ) : null}
-            <Link
-              className="text-decoration-none  text-light"
-              to="/"
-              onClick={signOut}
-            >
-              Log out
-            </Link>
-            <Link className="greet__user text-light d.none text-decoration-none">
-              <CgProfile /> {loggedIn}
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link
-              className="text-decoration-none  text-light link__login"
-              to="/login"
-            >
-              Login
-            </Link>
-            <Link
-              className="text-decoration-none  text-light link__register"
-              to="/register"
-            >
-              Register
-            </Link>
-          </>
-        )}
-        <Link to="/cart" className="text-decoration-none  text-light  h2">
-          <AiOutlineShoppingCart />
-        </Link>
+              <Link className="greet__user text-light d.none text-decoration-none">
+                <CgProfile /> {currentUser.username}
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                className="text-decoration-none  text-light link__login"
+                to="/login"
+              >
+                Login
+              </Link>
+              <Link
+                className="text-decoration-none  text-light link__register"
+                to="/register"
+              >
+                Register
+              </Link>
+            </>
+          )}
+          <Link to="/cart" className="text-decoration-none  text-light  h2">
+            <AiOutlineShoppingCart />
+          </Link>
+        </div>
       </Container>
     </Navbar>
   );

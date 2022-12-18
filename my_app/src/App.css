@@ -4,17 +4,9 @@
 body {
   background-color: #f8f9fa;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 #root {
   font-family: "Montserrat", sans-serif;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -56,6 +48,9 @@ body {
 .card {
   width: 20%;
   margin: 30px 35px;
+}
+.card:hover {
+  cursor: pointer;
 }
 .form__input::placeholder {
   font-size: 0.88rem;
@@ -103,4 +98,40 @@ body {
 img .d-block {
   height: 500px;
   object-fit: contain;
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    width: 100%;
+  }
+  .slider {
+    display: none;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    margin: 1.99rem auto;
+    padding: 1.2rem;
+  }
+  .icon--group {
+    width: 70%;
+
+    display: flex;
+    justify-content: space-around;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .authors__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
