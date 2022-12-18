@@ -62,7 +62,7 @@ const Register = () => {
       <div className="register__container d-flex justify-content-around m-5">
         <Form
           onSubmit={(e) => handleSubmit(e)}
-          className="m-5 w-25"
+          className="form m-5 w-25"
           style={{ fontFamily: "Titillium Web" }}
         >
           <Form.Group className="mb-3">

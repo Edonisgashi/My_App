@@ -33,6 +33,7 @@ const Index = () => {
     console.log(item);
     cart.push(item);
     console.log(cart);
+    e.stopPropagation();
   };
   return (
     <>

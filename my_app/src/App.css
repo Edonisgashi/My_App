@@ -100,7 +100,7 @@ img .d-block {
   object-fit: contain;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 991px) {
   .header {
     width: 100%;
   }
@@ -111,12 +111,13 @@ img .d-block {
     display: flex;
     flex-direction: column;
     width: 70%;
-    align-items: center;
+    z-index: 0;
   }
   .card {
     width: 100%;
     margin: 1.99rem auto;
     padding: 1.2rem;
+    transition: margin-top 0.5s;
   }
   .icon--group {
     width: 70%;
@@ -133,5 +134,64 @@ img .d-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .table {
+    font-size: 60%;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btns button {
+    width: 35%;
+  }
+  .register__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    justify-content: flex-start;
+  }
+  .form-row button {
+    min-width: fit-content;
+  }
+  .cart {
+    width: 100%;
+  }
+  .cart--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+    margin: 0.5rem auto;
+  }
+  .links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: fit-content;
+  }
+  .hide__menu {
+    display: none;
+  }
+  .open__menu {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 100%;
+    right: 0;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #dc3545;
+    opacity: 0.5;
+  }
+  .card__bottom {
+    margin-top: 12.5rem;
   }
 }

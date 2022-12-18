@@ -23,7 +23,7 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
         </h2>
         <h4 className="text-info">${book.price.toFixed(2)}</h4>
 
-        <div className="btns d-flex flex-row">
+        <div className=" d-flex flex-row">
           <Button
             variant="danger"
             className="mx-2 align-self-end"

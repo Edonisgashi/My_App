@@ -38,7 +38,7 @@ const Cart = ({ cart }) => {
   return (
     <>
       <Header />
-      <div className="w-75 bg-light shadow-lg mx-auto my-5">
+      <div className="cart w-75  shadow-lg mx-auto my-5">
         <div className="head d-flex align-items-center justify-content-evenly">
           <h2 className="text-muted ">Shopping Cart</h2>
 
@@ -50,7 +50,7 @@ const Cart = ({ cart }) => {
               return (
                 <div
                   key={item.id}
-                  className="d-flex w-75 my-3 border border-dark p-1 "
+                  className="cart--item d-flex w-75 my-3 border border-dark p-1 "
                 >
                   <img src={item.src} alt="" className="img-fluid w-25" />
                   <div className="m-5 qty h-25 d-flex align-items-center">

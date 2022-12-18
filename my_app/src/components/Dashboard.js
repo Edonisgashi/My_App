@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GrEdit } from "react-icons/gr";
 import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [updateRequest, setUpdateRequest] = useState(false);
   const [dataToUpdate, setDataToUpdate] = useState();
   const [bookID, setBookID] = useState();
-
+  const formRef = useRef(null);
   // console.log(title);
   const API = "http://localhost:3000/books";
   const fetchData = async () => {
@@ -31,12 +31,14 @@ const Dashboard = () => {
     e.preventDefault();
     setBookID(id);
     setUpdateRequest(true);
+
     fetch(`${API}/${id}`)
       .then((response) => response.json())
       .then((resp) => {
         console.log(resp);
         setDataToUpdate(resp);
       });
+    formRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleUpdateForm = (e) => {
@@ -94,7 +96,7 @@ const Dashboard = () => {
                     <td className="p-3">{el.title}</td>
                     <td className="p-3">{el.author.authorName}</td>
                     <td className="p-3">{el.price}</td>
-                    <td className="p-3 justify-content-center">
+                    <td className="p-3 justify-content-center btns">
                       <button
                         className="mx-3 btn btn-info px-4"
                         onClick={(e) => handleEditBtn(e, el.id)}
@@ -124,7 +126,7 @@ const Dashboard = () => {
             <h2 className="bg-danger bg-opacity-25 py-3 text-center">
               Update Book
             </h2>
-            <form onSubmit={(e) => handleUpdateForm(e)}>
+            <form onSubmit={(e) => handleUpdateForm(e)} ref={formRef}>
               <div className="form-group p-3 my-1">
                 <label htmlFor="bookTitle">Book Title</label>
                 <input

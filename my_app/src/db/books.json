@@ -271,6 +271,91 @@
         "authorName": "Ashlee Vance",
         "aboutAuthor": ""
       }
+    },
+    {
+      "title": "Critique Of Judgement",
+      "price": 17.75,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287687/9780199552467.jpg",
+      "qty": 39,
+      "publisher": "Oxford University Press",
+      "year": "2008",
+      "dimensions": "195 x 130 x 27",
+      "id": 8335224394211,
+      "orderQty": 1,
+      "description": "Kant's Critique of Judgement analyses our experience of the beautiful and the sublime in relation to nature, morality, and theology. Meredith's classic translation is here lightly revised and supplemented with a bilingual glossary. The edition also includes the important First Introduction.",
+      "language": "EN",
+      "author": {
+        "authorName": "Immanuel Kant",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Immanuel Kant: Prolegomena to Any Future Metaphysics",
+      "price": 31.09,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1309140/9780521535359.jpg",
+      "qty": 109,
+      "publisher": "Cambridge University Press",
+      "year": "2004",
+      "dimensions": "228 x 152 x 13",
+      "id": 2720991299386,
+      "orderQty": 1,
+      "description": "This revised edition of Kant's Prolegomena includes selections from the Critique of Pure Reason (which fill out and explicate some of Kant's central arguments), together with the first reviews of the Critique, to which Kant responded in the Prolegomena.",
+      "language": "EN",
+      "author": {
+        "authorName": "Immanuel Kant",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "21 Lessons For The 21St Century",
+      "price": 27.21,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294073/9781784708283.jpg",
+      "qty": 77,
+      "publisher": "Vintage Publishing",
+      "year": "2019",
+      "dimensions": "129 x 196 x 33",
+      "id": 6335398547187,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Special Operations In The Age Of Chivalry 1100 1550",
+      "price": 29.19,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294794/9781843834526.jpg",
+      "qty": 199,
+      "publisher": "Boydell & Brewer Ltd",
+      "year": 2009,
+      "dimensions": "235 x 154 x 15",
+      "id": 4395310194112,
+      "orderQty": 1,
+      "description": "The author of the international bestseller Sapiens: A Brief History of Humankind looks at covert operations and assassination plots in the medieval period, matching anything to be found in our own era.",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "A Song Of Ice And Fire Book Set 6 Books",
+      "price": 66.66,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1285886/9780007477166.jpg",
+      "qty": 77,
+      "publisher": "Harpercollins Publishers",
+      "year": "1970",
+      "dimensions": "N/A",
+      "id": 507769705959,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "George R.R Martin",
+        "aboutAuthor": ""
+      }
     }
   ]
 }

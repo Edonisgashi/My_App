@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <>
       <Header />
-      <form>
+      <form className="form">
         <div className="form-row align-items-center  w-25 my-5 mx-auto border p-5 bg-dark bg-opacity-25 shadow-lg p-3 mb-5  rounded">
           <div className="col-auto">
             <label className="sr-only my-2" htmlFor="inlineFormInput">
