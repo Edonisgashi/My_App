@@ -28,10 +28,11 @@ import OrderMessage from "./components/OrderMessage";
 
 const Index = () => {
   const [cart, setCart] = useState([]);
-
+  const [cartLength, setCartLength] = useState();
   const addToCartBtn = (e, item) => {
     console.log(item);
     cart.push(item);
+    setCartLength(cart.length);
     console.log(cart);
     e.stopPropagation();
   };
@@ -39,14 +40,23 @@ const Index = () => {
     <>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<App addToCartBtn={addToCartBtn} />} />
+          <Route
+            path="/"
+            element={
+              <App addToCartBtn={addToCartBtn} cartLength={cartLength} />
+            }
+          />
           <Route
             path="/enbooks"
-            element={<EnBooks addToCartBtn={addToCartBtn} />}
+            element={
+              <EnBooks addToCartBtn={addToCartBtn} cartLength={cartLength} />
+            }
           />
           <Route
             path="/albooks"
-            element={<AlBooks addToCartBtn={addToCartBtn} />}
+            element={
+              <AlBooks addToCartBtn={addToCartBtn} cartLength={cartLength} />
+            }
           />
           <Route path="/author" element={<Authors />} />
           <Route path="/register" element={<Register />} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cards from "./Cards";
-const EnBooks = ({ addToCartBtn }) => {
+const EnBooks = ({ addToCartBtn, cartLength }) => {
   const [enBook, setEnBook] = useState([]);
   const [loader, setLoader] = useState(false);
   const API = "http://localhost:3000/books";
@@ -25,7 +25,7 @@ const EnBooks = ({ addToCartBtn }) => {
 
   return (
     <>
-      <Header />
+      <Header cartLength={cartLength} />
 
       <div className="cardContainer  my-5 mx-auto">
         {loader

@@ -6,25 +6,16 @@ import { BsBook } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
-import { renderToString } from "react-dom/server";
-import {
-  HashRouter,
-  Route,
-  Routes,
-  Link,
-  NavLink,
-  Outlet,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Header = (props) => {
+const Header = ({ cartLength }) => {
   const [shownMenu, setShownMenu] = useState(false);
+
   const loggedIn = window.localStorage.getItem("isLoggedIn");
   const signOut = () => {
     window.localStorage.removeItem("isLoggedIn");
   };
 
-  const btnHTMLClose = renderToString(<GrClose />);
-  const btnHTMLShow = renderToString(<GiHamburgerMenu />);
   const showMenu = (e) => {
     const links = document.querySelector(".links");
     links.classList.toggle("hide__menu");
@@ -51,17 +42,15 @@ const Header = (props) => {
       <Container>
         <Link to="/" className="navbar-brand text-light">
           <h3>
-            {" "}
             <BsBook /> E-Books
           </h3>
         </Link>
         <button
-          dangerouslySetInnerHTML={{
-            __html: shownMenu ? btnHTMLClose : btnHTMLShow,
-          }}
           className="d-block btn btn-none d-lg-none "
           onClick={(e) => showMenu(e)}
-        ></button>
+        >
+          {shownMenu ? <GrClose /> : <GiHamburgerMenu />}
+        </button>
         <div className="links  hide__menu d-lg-flex justify-content-around  w-75 align-items-center ">
           <Link to="/enbooks" className="text-decoration-none  text-light">
             Books in English
@@ -110,7 +99,10 @@ const Header = (props) => {
             </>
           )}
           <Link to="/cart" className="text-decoration-none  text-light  h2">
-            <AiOutlineShoppingCart />
+            <AiOutlineShoppingCart />{" "}
+            <sup className="text-superscript">
+              {cartLength ? cartLength : null}
+            </sup>
           </Link>
         </div>
       </Container>

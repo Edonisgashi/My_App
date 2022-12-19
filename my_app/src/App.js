@@ -8,7 +8,12 @@ import BackTop from "./components/BackTop";
 import Cards from "./components/Cards";
 import "./App.css";
 
-const App = ({ addToCartBtn, selectedProduct, setSelectedProduct }) => {
+const App = ({
+  addToCartBtn,
+  selectedProduct,
+  setSelectedProduct,
+  cartLength,
+}) => {
   const [book, setBook] = useState([]);
   const [loaded, setLoader] = useState(false);
   const [loadedBook, setLoadedBook] = useState([]);
@@ -49,7 +54,7 @@ const App = ({ addToCartBtn, selectedProduct, setSelectedProduct }) => {
 
   return (
     <>
-      <Header />
+      <Header cartLength={cartLength} />
       <Slider />
 
       <BackTop />

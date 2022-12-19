@@ -11,7 +11,6 @@ const Dashboard = () => {
   const [dataToUpdate, setDataToUpdate] = useState();
   const [bookID, setBookID] = useState();
   const formRef = useRef(null);
-  // console.log(title);
   const API = "http://localhost:3000/books";
   const fetchData = async () => {
     await fetch(API)
