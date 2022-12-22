@@ -12,6 +12,8 @@ const Header = ({ cartLength }) => {
   const [shownMenu, setShownMenu] = useState(false);
 
   const loggedIn = window.localStorage.getItem("isLoggedIn");
+  console.log(loggedIn);
+  const currentUser = JSON.parse(loggedIn);
   const signOut = () => {
     window.localStorage.removeItem("isLoggedIn");
   };
@@ -28,7 +30,6 @@ const Header = ({ cartLength }) => {
       setShownMenu(false);
     }
   };
-  const currentUser = JSON.parse(loggedIn);
   useEffect(() => {
     console.log(currentUser);
   }, []);

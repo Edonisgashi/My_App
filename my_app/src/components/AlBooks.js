@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Cards from "./Cards";
 import Footer from "./Footer";
-import { BiArrowFromLeft } from "react-icons/bi";
+
 const AlBooks = ({ addToCartBtn, cartLength }) => {
   const [alBook, setAlBook] = useState([]);
   const [loader, setLoader] = useState(false);

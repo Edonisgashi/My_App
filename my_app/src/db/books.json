@@ -1,25 +1,8 @@
 {
   "books": [
     {
-      "title": "Anna Karenina",
-      "price": 12.16,
-      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1286966/9780140449174.jpg",
-      "qty": 9,
-      "publisher": "Books LTD",
-      "year": "2003",
-      "orderQty": 1,
-      "dimensions": "197 x 134 x 47",
-      "description": "Anna Karenina seems to have everything - beauty, wealth, popularity and an adored son. But she feels that her life is empty until the moment she encounters the impetuous officer Count Vronsky. Their subsequent affair scandalizes society and family alike, and soon brings jealousy and bitterness in its wake.",
-      "language": "EN",
-      "author": {
-        "authorName": "Leo Tolstoy",
-        "aboutAuthor": ""
-      },
-      "id": "3253657090660"
-    },
-    {
-      "title": "Homo Deus A Brief History Of Tomorrow",
-      "price": 18.88,
+      "title": "Homo Deus A Brief History Of Tomorrow...",
+      "price": 20,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294051/9781784703936.jpg",
       "qty": 200,
       "publisher": "Vintage Publishing",
@@ -354,6 +337,23 @@
       "language": "EN",
       "author": {
         "authorName": "George R.R Martin",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " Veriti ",
+      "price": 10.69,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1817402/veriti11.jpg",
+      "qty": 20,
+      "publisher": "Living",
+      "year": "2022",
+      "dimensions": "129 x 130  x 35",
+      "id": 463334162023,
+      "orderQty": 1,
+      "description": "Louen Eshli është një shkrimtare e re, e cila përballet me vështirësi financiare. Papritmas, i vjen një ofertë që nuk mund ta refuzojë, sepse do t’i sjellë të ardhura që nuk i ka imagjinuar kurrë. Xheremi Kroford, bashkëshorti i shkrimtares së suksesshme Veriti Kroford, e punëson për të përfunduar serinë e librave të së shoqes, e cila ka pësuar një aksident automobilistik me pasoja të rënda shëndetësore. Loueni mbërrin në shtëpinë e Krofordëve e vendosur për të gjetur ndihmë në shënimet e Veritisë, që të nisë nga puna me librat. Ajo as që e ka idenë se në studion kaotike të shkrimtares së mirënjohur nuk e presin shënimet për librat, por autobiografia e saj, të cilën e kishte shkruar me idenë se nuk do ta lexonte askush. Faqe pas faqeje zbulohen rrëfime drithëruese, përfshirë një përshkrim të detajuar të natës kur jeta e familjes Kroford do të ndryshonte përgjithmonë.",
+      "language": "AL",
+      "author": {
+        "authorName": "Colleen Hoover",
         "aboutAuthor": ""
       }
     }

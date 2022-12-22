@@ -14,21 +14,13 @@ const Register = () => {
   const [password, setPassword] = useState();
   const [checked, setChecked] = useState(false);
   const [incomingData, setIncomingData] = useState(false);
-  const API = "http://localhost:3008/users";
+  const [registeredUser, setRegisteredUser] = useState();
+  const API = "http://localhost:3001/users";
   const randomId = Math.floor(Math.random() * 1000000).toFixed(0);
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  console.log(emailRegex);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIncomingData(true);
-  };
-  const navigate = useNavigate();
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate("/welcome");
-  };
 
+  const navigate = useNavigate();
   const sendData = async () => {
     const data = {
       id: Number(randomId).toFixed(0),
@@ -48,14 +40,23 @@ const Register = () => {
       },
     })
       .then((resp) => resp.json())
-      .then((data) => console.log(data))
+      .then((data) => setRegisteredUser(data))
       .catch((err) => console.log(err));
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIncomingData(true);
+  };
+
   useEffect(() => {
-    if (incomingData) {
+    if (incomingData && !registeredUser) {
       sendData();
     }
-  });
+    if (registeredUser) {
+      window.localStorage.setItem("isLoggedIn", JSON.stringify(registeredUser));
+      navigate("/");
+    }
+  }, [incomingData, registeredUser]);
   return (
     <>
       <Header />
@@ -133,15 +134,10 @@ const Register = () => {
           </Form.Group>
 
           {checked ? (
-            <Link to="/welcome" className="text-decoration-none">
-              <Button
-                variant="outline-success"
-                type="submit"
-                onClick={(e) => handleClick(e)}
-              >
-                Create an Account
-              </Button>
-            </Link>
+            <Button variant="outline-success" type="submit">
+              Create an Account
+              <Link to="/"></Link>
+            </Button>
           ) : null}
         </Form>
         <div

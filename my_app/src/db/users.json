@@ -35,6 +35,33 @@
       "email": "florindlatifi@example.com",
       "username": "florindlatifi",
       "password": "00000000"
+    },
+    {
+      "id": "752033",
+      "firstName": "Besiana",
+      "lastName": "Syla",
+      "role": "user",
+      "email": "besianasyla@example.com",
+      "username": "besianasyla",
+      "password": "0000"
+    },
+    {
+      "id": "307981",
+      "firstName": "Aulona",
+      "lastName": "Nikci",
+      "role": "user",
+      "email": "aulonanikci@example.com",
+      "username": "aulonanikci",
+      "password": "0000"
+    },
+    {
+      "id": "868662",
+      "firstName": "Filan",
+      "lastName": "Fisteku",
+      "role": "user",
+      "email": "filanfisteku@example.com",
+      "username": "filanfisteku",
+      "password": "0000"
     }
   ]
 }

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import Dashboard from "./Dashboard";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 const Login = () => {
   const [accounts, setAccounts] = useState([]);
@@ -10,6 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [currentUser, setCurrentUser] = useState();
   const [loader, setLoader] = useState(false);
+  const navigate = useNavigate();
 
   const API = " http://localhost:3001/users";
   const users = async () => {
@@ -23,7 +23,7 @@ const Login = () => {
   };
   useEffect(() => {
     users();
-  }, []);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const Login = () => {
 
       document.querySelector(".link__login").classList.add("d-none");
       document.querySelector(".link__register").classList.add("d-none");
-      window.localStorage.setItem("isLoggedIn", JSON.stringify(currentUser));
+
       if (currentUser.role === "admin") {
         document.querySelector(".link__dashboard").classList.remove("d-none");
       } else {
@@ -49,7 +49,10 @@ const Login = () => {
       console.log("Passwords do not match");
     }
   };
-
+  if (currentUser) {
+    window.localStorage.setItem("isLoggedIn", JSON.stringify(currentUser));
+    navigate("/");
+  }
   return (
     <>
       <Header />
