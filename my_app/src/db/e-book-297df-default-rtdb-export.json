@@ -1,0 +1,435 @@
+{
+  "books": [
+    {
+      "title": "Homo Deus A Brief History Of Tomorrow...",
+      "price": 20,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294051/9781784703936.jpg",
+      "qty": 200,
+      "publisher": "Vintage Publishing",
+      "orderQty": 1,
+      "year": "2017",
+      "dimensions": "130 x 197 x 40",
+      "id": 5482707888843,
+      "description": "Homo Deus explores the projects, dreams and nightmares that will shape the twenty-first century and beyond - from overcoming death to creating artificial life. It asks the fundamental questions: how can we protect this fragile world from our own destructive power?",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Sapiens",
+      "price": 30.04,
+      "orderQty": 1,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1286450/9780062316097.jpg",
+      "qty": 201,
+      "publisher": "Harpercollins Publishers",
+      "year": "2017",
+      "dimensions": "200 x 188 x 55",
+      "id": 4820587217799,
+      "description": "100,000 years ago, at least six human species inhabited the earth. In Sapiens, Dr Yuval Noah Harari spans the whole of human history, from the very first humans to walk the earth to the radical - and sometimes devastating - breakthroughs of the Cognitive, Agricultural and Scientific Revolutions.",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Unfxck Yourself",
+      "price": 9.99,
+      "src": "https://m.media-amazon.com/images/I/51EDXUBrC1L.jpg",
+      "qty": 177,
+      "publisher": "Botimet Pema",
+      "year": "2015",
+      "dimensions": "129 x 198 x 35",
+      "id": 1253600531328,
+      "orderQty": 1,
+      "description": "",
+      "language": "AL",
+      "author": {
+        "authorName": "Gary John Bishop",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Atomic Habits",
+      "price": 36.75,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1690648/9780735211292.jpg",
+      "qty": 111,
+      "publisher": "Cornerstone",
+      "year": "2016",
+      "dimensions": "130 x 200 x 39",
+      "id": 8521733363548,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "James Clear",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Lopa e machiatos",
+      "price": 8.88,
+      "src": "https://gv466hf5ah.gjirafa.net/image/0342/0342417.jpg?width=600&height=600",
+      "qty": 119,
+      "publisher": "Botimet Koha",
+      "year": "2020",
+      "dimensions": "140 x 199 x 33",
+      "id": 9328939922837,
+      "orderQty": 1,
+      "description": "BOTIMET KOHA sjell vëllimin e katërt të shenimeve heretike të Veton Surroit “LOPA E MACCHIATOS”. Është një udhëtim aventure intelektuale të historisë personale e familjare të autorit e të shtetndërtimit në Kosovë. Një analizë që fillon me urinën e qenit që bën kufinj, ndikimin e jetës shtazore në funksionet tona dhe përfundon me lopën që bën makiato dhe kujtesë mënyrë se si e trajtojmë të kaluarën. Një rrëfim për pasaportat, vizat, shtetet që bëhen e zhbëhen dhe jetët tona në to. Një debat teologjik mbi mitin e Kosovës, islamizmin dhe islamofobinë. Një thellim intelektual mbi përcaktimin e Kosovës si Evropiane që u reziston tri sulmeve Aziatike. Dhe në fund një memorandum për gjeneralin Marshall dhe trashëgimtarët e tij mbi parimet për një paqe të përhershme në mes të Republikës së Kosovës dhe Republikës së Serbisë. ",
+      "language": "AL",
+      "author": {
+        "authorName": "Veton Surroi",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Dramatika",
+      "price": 22.89,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1802124/9789928331076.jpg",
+      "qty": 199,
+      "publisher": "Botime Franceskane",
+      "year": "2020",
+      "dimensions": "140 x 201 x 45",
+      "id": 3892625485150,
+      "orderQty": 1,
+      "description": "Në 80-vjetorin e vdekjes së Át Gjergj Fishtës Botimet Françeskane kanë ndërmarrë nxjerrjen e nji botimi të posaçëm të veprës së tij në gjashtë vëllime. Çdo vëllim paraprihet prej një studimi të veçantë nga personalitete të njohura në fushën e shkencave albanologjike në Shqipëri dhe Kosovë. Dramatika është strukturuar në një formë të veçantë nga Prof. Kujtim Shala.",
+      "language": "AL",
+      "author": {
+        "authorName": "Gjergj Fishta",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Hitleri ishte miku im",
+      "price": 11.19,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1775384/1111.jpg",
+      "qty": 77,
+      "publisher": "Onufri",
+      "year": "2022",
+      "dimensions": "140 x 201 x 30",
+      "id": 2404547637185,
+      "orderQty": 1,
+      "description": "Per here te pare vjen para lexuesit nje tjeter pamje e Adolf Hitlerit. Fotografi i tij, Heinrich Hoffmann rrefen miqesine e ngushte me njeriun qe trazoi boten, duke u ndalur tek ana e panjohur e tij. Ky liber vjen i perkthyer nga Bujar Hudhri dhe i hedhur ne qarkullim nga shtepia botuese Onufri",
+      "language": "AL",
+      "author": {
+        "authorName": "Heinrich Hoffmann",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Femrat",
+      "price": 9.35,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691466/9789928248480.jpg",
+      "qty": 23,
+      "publisher": "Pegi",
+      "year": "2017",
+      "dimensions": "130 x 200 x 39",
+      "id": 2340510859291,
+      "orderQty": 1,
+      "description": "Shkrimtari i shthurur dhe alkooliku i paepur Henri Çinaski ka lindur për të mbijetuar. Pas dekadash të tëra punësh të papaguara, shkapërderdhje parash me gra dhe baste, edhe Çinaskit më së fundi i ndrin ylli i tij letrar. Në këtë furi fame dhe alkooli, Bukowski rrëfen haptas dhe pa asnjë nënkuptim një pasion magjepsës të tij: gratë dhe aventurat e tij të dashurisë, të vërteta apo të sajuara qofshin. Për të, ato janë burim i përhershëm tërheqjeje, një nevojë që nuk njeh prehje dhe nuk ndalet as para situatash nga më të pavolitshmet, më të turpshmet apo më të neveritshmet. Disa gra duan pak a shumë atë që do dhe ai – seksin e thjeshtë, pa komplikime – disa duan ta ndryshojnë, disa duan të kenë një lidhje normale me të e të pakta janë ato që duket se nuk mund ta pranojnë paaftësinë e tij për të mos fjetur me shumicën e grave që takon. Kërkimi i tij nuk resht përpara asgjëje, ndoshta sepse dashuria dhe lufta mes sekseve janë mjeti më i sigurt për shkrimtarin amerikan për të ruajtur lidhjet me realitetin.",
+      "language": "AL",
+      "author": {
+        "authorName": "Charles Bukowski",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "KODI I DA VINCIT",
+      "price": 10.77,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691488/9789994333038.png",
+      "qty": 28,
+      "publisher": "Dudaj",
+      "year": "2006",
+      "dimensions": "140 x 199 x 38",
+      "id": 4874678055631,
+      "orderQty": 1,
+      "description": "Një kod gjenial i fshehur në veprat e Leonardo Da Vinçit. Një vrap i dëshpëruar nëpër katedralet dhe kështjellat e Europës. Një e vërtetë që të lë gojëhapur fshehur në shekuj… Më në fund zbulohet. Sipas miliona lexuesve në mbarë botën, leximi i Kodit të Da Vinçit është një përvojë krejt ndryshe nga të tjerat. Me një ritëm rrufeje, inteligjent dhe i ndërthurur në mënyrë të ndërlikuar me hulumtime dhe detaje të jashtëzakonshme. Romani i Dan Brown-it është një kryevepër që të mban pezull që në faqet e para e deri në mbylljen befasuese.",
+      "language": "AL",
+      "author": {
+        "authorName": "Dan Brown",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "21 Lessons For The 21St Century",
+      "price": 12.98,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294073/9781784708283.jpg",
+      "qty": 444,
+      "publisher": "Vintage Publishing",
+      "year": "2019",
+      "dimensions": "129 x 196 x 33",
+      "id": 4046643599360,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Brief Answers To The Big Questions",
+      "price": 22.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1292559/9781473695986.jpg",
+      "qty": 99,
+      "publisher": "Hodder & Stoughton General Divi",
+      "year": "2016",
+      "dimensions": "140 x 205 x 38",
+      "id": 6070575959028,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "Stephen Hawking",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Letter To My Father",
+      "price": 8.55,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1295039/9781847997517.jpg",
+      "qty": 20,
+      "publisher": "Marshall Cavendish International (Asia) Pte Ltd",
+      "year": "2021",
+      "dimensions": "135 x 216 x 34",
+      "id": 8008725974122,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "Franz Kafka",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " Beyond Good And Evil ",
+      "price": 13.95,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287364/9780141395838.jpg",
+      "qty": 88,
+      "publisher": "Penguin Books Ltd",
+      "year": "2014",
+      "dimensions": "176 x 120 x 31",
+      "id": 8402115836459,
+      "orderQty": 1,
+      "description": "One of the most iconoclastic philosophers of all time, the author dramatically rejected notions of good and evil, truth and God. With wit and subversive energy, he demands that the individual impose their own 'will to power' upon the world. This book demonstrates that the world is steeped in false piety and infected with a 'slave morality'.",
+      "language": "EN",
+      "author": {
+        "authorName": "Friedrich Nietzsche",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " I Am Malala",
+      "price": 16.05,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1293687/9781780226583.jpg",
+      "qty": 333,
+      "publisher": "Orion Publishing Co",
+      "year": "2014",
+      "dimensions": "131 x 198 x 25",
+      "id": 5066696034943,
+      "orderQty": 1,
+      "description": "The bestselling memoir of youngest ever NOBEL PRIZE winner, Malala Yousafzai, the schoolgirl who stood up to the Taliban. 'Malala is an inspiration to girls and women all over the world' J K Rowling",
+      "language": "EN",
+      "author": {
+        "authorName": "Malala Yousafzai",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Elon Musk How The Billionare Ceo Of Spacex And Tesla Is Shaping Our Future",
+      "price": 15.55,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1290165/9780753555644.jpg",
+      "qty": 12,
+      "publisher": "Simon & Schuster Ltd",
+      "year": "2016",
+      "dimensions": "128 x 197 x 27",
+      "id": 2781634430198,
+      "orderQty": 1,
+      "description": "South African born Elon Musk is the renowned entrepreneur and innovator behind PayPal, SpaceX, Tesla, and SolarCity. Musk wants to save our planet; he wants to send citizens into space, to form a colony on Mars; he wants to make money while doing these things; and he wants us all to know about it. This book deals with his life and work.",
+      "language": "EN",
+      "author": {
+        "authorName": "Ashlee Vance",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Critique Of Judgement",
+      "price": 17.75,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1287687/9780199552467.jpg",
+      "qty": 39,
+      "publisher": "Oxford University Press",
+      "year": "2008",
+      "dimensions": "195 x 130 x 27",
+      "id": 8335224394211,
+      "orderQty": 1,
+      "description": "Kant's Critique of Judgement analyses our experience of the beautiful and the sublime in relation to nature, morality, and theology. Meredith's classic translation is here lightly revised and supplemented with a bilingual glossary. The edition also includes the important First Introduction.",
+      "language": "EN",
+      "author": {
+        "authorName": "Immanuel Kant",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Immanuel Kant: Prolegomena to Any Future Metaphysics",
+      "price": 31.09,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1309140/9780521535359.jpg",
+      "qty": 109,
+      "publisher": "Cambridge University Press",
+      "year": "2004",
+      "dimensions": "228 x 152 x 13",
+      "id": 2720991299386,
+      "orderQty": 1,
+      "description": "This revised edition of Kant's Prolegomena includes selections from the Critique of Pure Reason (which fill out and explicate some of Kant's central arguments), together with the first reviews of the Critique, to which Kant responded in the Prolegomena.",
+      "language": "EN",
+      "author": {
+        "authorName": "Immanuel Kant",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "21 Lessons For The 21St Century",
+      "price": 27.21,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294073/9781784708283.jpg",
+      "qty": 77,
+      "publisher": "Vintage Publishing",
+      "year": "2019",
+      "dimensions": "129 x 196 x 33",
+      "id": 6335398547187,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Special Operations In The Age Of Chivalry 1100 1550",
+      "price": 29.19,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294794/9781843834526.jpg",
+      "qty": 199,
+      "publisher": "Boydell & Brewer Ltd",
+      "year": 2009,
+      "dimensions": "235 x 154 x 15",
+      "id": 4395310194112,
+      "orderQty": 1,
+      "description": "The author of the international bestseller Sapiens: A Brief History of Humankind looks at covert operations and assassination plots in the medieval period, matching anything to be found in our own era.",
+      "language": "EN",
+      "author": {
+        "authorName": "Yuval Noah Harari",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "A Song Of Ice And Fire Book Set 6 Books",
+      "price": 66.66,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1285886/9780007477166.jpg",
+      "qty": 77,
+      "publisher": "Harpercollins Publishers",
+      "year": "1970",
+      "dimensions": "N/A",
+      "id": 507769705959,
+      "orderQty": 1,
+      "description": "",
+      "language": "EN",
+      "author": {
+        "authorName": "George R.R Martin",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " Veriti ",
+      "price": 10.69,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1817402/veriti11.jpg",
+      "qty": 20,
+      "publisher": "Living",
+      "year": "2022",
+      "dimensions": "129 x 130  x 35",
+      "id": 463334162023,
+      "orderQty": 1,
+      "description": "Louen Eshli është një shkrimtare e re, e cila përballet me vështirësi financiare. Papritmas, i vjen një ofertë që nuk mund ta refuzojë, sepse do t’i sjellë të ardhura që nuk i ka imagjinuar kurrë. Xheremi Kroford, bashkëshorti i shkrimtares së suksesshme Veriti Kroford, e punëson për të përfunduar serinë e librave të së shoqes, e cila ka pësuar një aksident automobilistik me pasoja të rënda shëndetësore. Loueni mbërrin në shtëpinë e Krofordëve e vendosur për të gjetur ndihmë në shënimet e Veritisë, që të nisë nga puna me librat. Ajo as që e ka idenë se në studion kaotike të shkrimtares së mirënjohur nuk e presin shënimet për librat, por autobiografia e saj, të cilën e kishte shkruar me idenë se nuk do ta lexonte askush. Faqe pas faqeje zbulohen rrëfime drithëruese, përfshirë një përshkrim të detajuar të natës kur jeta e familjes Kroford do të ndryshonte përgjithmonë.",
+      "language": "AL",
+      "author": {
+        "authorName": "Colleen Hoover",
+        "aboutAuthor": ""
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Edonis",
+      "lastName": "Gashi",
+      "role": "admin",
+      "email": "edonisgashi@outlook.com",
+      "username": "edonisgashi",
+      "password": "123456789"
+    },
+    {
+      "id": "226505",
+      "firstName": "Nebih",
+      "lastName": "Miftari",
+      "role": "user",
+      "email": "nebihmiftari@example.com",
+      "username": "nebihmiftari",
+      "password": "11111111"
+    },
+    {
+      "id": "807031",
+      "firstName": "Vigan",
+      "lastName": "Berisha",
+      "role": "user",
+      "email": "viganberisha@example.com",
+      "username": "viganberisha",
+      "password": "00000000"
+    },
+    {
+      "id": "839343",
+      "firstName": "Florind",
+      "lastName": "Latifi",
+      "role": "user",
+      "email": "florindlatifi@example.com",
+      "username": "florindlatifi",
+      "password": "00000000"
+    },
+    {
+      "id": "752033",
+      "firstName": "Besiana",
+      "lastName": "Syla",
+      "role": "user",
+      "email": "besianasyla@example.com",
+      "username": "besianasyla",
+      "password": "0000"
+    },
+    {
+      "id": "307981",
+      "firstName": "Aulona",
+      "lastName": "Nikci",
+      "role": "user",
+      "email": "aulonanikci@example.com",
+      "username": "aulonanikci",
+      "password": "0000"
+    },
+    {
+      "id": "868662",
+      "firstName": "Filan",
+      "lastName": "Fisteku",
+      "role": "user",
+      "email": "filanfisteku@example.com",
+      "username": "filanfisteku",
+      "password": "0000"
+    },
+    {
+      "id": "420298",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "user",
+      "email": "johndoe@example.com",
+      "username": "johndoe",
+      "password": "0000"
+    }
+  ]
+}

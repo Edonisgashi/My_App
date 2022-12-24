@@ -17,7 +17,8 @@ const AddABook = () => {
   const [aboutAuthor, setAboutAuthor] = useState("");
   const [loader, setLoader] = useState(false);
   const randomId = Math.floor(Math.random() * 10000000000000).toFixed(0);
-  const API = "  http://localhost:3000/books";
+  const API = "http://localhost:3000/books";
+
   const handleForm = (e) => {
     setLoader(true);
   };

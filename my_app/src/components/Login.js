@@ -11,7 +11,7 @@ const Login = () => {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
-  const API = " http://localhost:3001/users";
+  const API = "http://localhost:3001/users";
   const users = async () => {
     await fetch(API)
       .then((response) => response.json())
