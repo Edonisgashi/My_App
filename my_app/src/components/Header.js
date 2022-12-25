@@ -41,7 +41,7 @@ const Header = ({ cartLength }) => {
       className="bg-opacity-75 sticky-top shadow-lg p-3 header"
     >
       <Container>
-        <Link to="/" className="navbar-brand text-danger mx-3">
+        <Link to="/" className="navbar-brand text-danger">
           <h3>
             <BsBook /> E-Books
           </h3>
