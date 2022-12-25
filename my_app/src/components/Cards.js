@@ -25,14 +25,20 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
 
         <div className=" d-flex flex-row">
           <Button
+<<<<<<< HEAD
             variant="outline-danger"
             className="mx-2 align-self-end border-0"
+=======
+            variant="danger"
+            className="mx-2 align-self-end"
+>>>>>>> origin/main
             onClick={(e) => addToCartBtn(e, book)}
           >
             Add to cart
           </Button>
 
           <Link to={`/product/${book.id}`}>
+<<<<<<< HEAD
             <Button
               variant="outline-danger"
               className="mx-2 align-self-end border-0"
@@ -40,6 +46,14 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
             >
               Details
             </Button>
+=======
+            <button
+              className="mx-2 align-self-end btn btn-light"
+              onClick={(e) => showDetails(e, book.id)}
+            >
+              Details
+            </button>
+>>>>>>> origin/main
           </Link>
         </div>
       </div>
