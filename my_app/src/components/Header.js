@@ -36,21 +36,12 @@ const Header = ({ cartLength }) => {
 
   return (
     <Navbar
-<<<<<<< HEAD
       bg="light"
       variant="light"
       className="bg-opacity-75 sticky-top shadow-lg p-3 header"
     >
       <Container>
         <Link to="/" className="navbar-brand text-danger">
-=======
-      bg="danger"
-      variant="danger"
-      className="bg-opacity-75 sticky-top shadow-lg p-3 header "
-    >
-      <Container>
-        <Link to="/" className="navbar-brand text-light">
->>>>>>> origin/main
           <h3>
             <BsBook /> E-Books
           </h3>
@@ -62,7 +53,6 @@ const Header = ({ cartLength }) => {
           {shownMenu ? <GrClose /> : <GiHamburgerMenu />}
         </button>
         <div className="links  hide__menu d-lg-flex justify-content-around  w-75 align-items-center ">
-<<<<<<< HEAD
           <Link to="/enbooks" className="text-decoration-none  text-danger">
             Books in English
           </Link>
@@ -70,79 +60,46 @@ const Header = ({ cartLength }) => {
             Books in Albanian
           </Link>
           <Link className="text-decoration-none  text-danger" to="/author">
-=======
-          <Link to="/enbooks" className="text-decoration-none  text-light">
-            Books in English
-          </Link>
-          <Link className="text-decoration-none  text-light" to="/albooks">
-            Books in Albanian
-          </Link>
-          <Link className="text-decoration-none  text-light" to="/author">
->>>>>>> origin/main
             Authors
           </Link>
           {currentUser ? (
             <>
               {currentUser.role === "admin" ? (
                 <Link
-<<<<<<< HEAD
                   className="text-decoration-none  text-danger"
-=======
-                  className="text-decoration-none  text-light"
->>>>>>> origin/main
                   to="/dashboard"
                 >
                   Dashboard
                 </Link>
               ) : null}
               <Link
-<<<<<<< HEAD
                 className="text-decoration-none  text-danger"
-=======
-                className="text-decoration-none  text-light"
->>>>>>> origin/main
                 to="/"
                 onClick={signOut}
               >
                 Log out
               </Link>
-<<<<<<< HEAD
               <Link className="greet__user text-danger d.none text-decoration-none">
-=======
-              <Link className="greet__user text-light d.none text-decoration-none">
->>>>>>> origin/main
                 <CgProfile /> {currentUser.username}
               </Link>
             </>
           ) : (
             <>
               <Link
-<<<<<<< HEAD
                 className="text-decoration-none  text-danger link__login"
-=======
-                className="text-decoration-none  text-light link__login"
->>>>>>> origin/main
                 to="/login"
               >
                 Login
               </Link>
               <Link
-<<<<<<< HEAD
                 className="text-decoration-none  text-danger link__register"
-=======
-                className="text-decoration-none  text-light link__register"
->>>>>>> origin/main
                 to="/register"
               >
                 Register
               </Link>
             </>
           )}
-<<<<<<< HEAD
           <Link to="/cart" className="text-decoration-none  text-danger  h2">
-=======
-          <Link to="/cart" className="text-decoration-none  text-light  h2">
->>>>>>> origin/main
             <AiOutlineShoppingCart />{" "}
             <sup className="text-superscript">
               {cartLength ? cartLength : null}
