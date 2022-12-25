@@ -120,23 +120,6 @@
       }
     },
     {
-      "title": "Femrat",
-      "price": 9.35,
-      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691466/9789928248480.jpg",
-      "qty": 23,
-      "publisher": "Pegi",
-      "year": "2017",
-      "dimensions": "130 x 200 x 39",
-      "id": 2340510859291,
-      "orderQty": 1,
-      "description": "Shkrimtari i shthurur dhe alkooliku i paepur Henri Çinaski ka lindur për të mbijetuar. Pas dekadash të tëra punësh të papaguara, shkapërderdhje parash me gra dhe baste, edhe Çinaskit më së fundi i ndrin ylli i tij letrar. Në këtë furi fame dhe alkooli, Bukowski rrëfen haptas dhe pa asnjë nënkuptim një pasion magjepsës të tij: gratë dhe aventurat e tij të dashurisë, të vërteta apo të sajuara qofshin. Për të, ato janë burim i përhershëm tërheqjeje, një nevojë që nuk njeh prehje dhe nuk ndalet as para situatash nga më të pavolitshmet, më të turpshmet apo më të neveritshmet. Disa gra duan pak a shumë atë që do dhe ai – seksin e thjeshtë, pa komplikime – disa duan ta ndryshojnë, disa duan të kenë një lidhje normale me të e të pakta janë ato që duket se nuk mund ta pranojnë paaftësinë e tij për të mos fjetur me shumicën e grave që takon. Kërkimi i tij nuk resht përpara asgjëje, ndoshta sepse dashuria dhe lufta mes sekseve janë mjeti më i sigurt për shkrimtarin amerikan për të ruajtur lidhjet me realitetin.",
-      "language": "AL",
-      "author": {
-        "authorName": "Charles Bukowski",
-        "aboutAuthor": ""
-      }
-    },
-    {
       "title": "KODI I DA VINCIT",
       "price": 10.77,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691488/9789994333038.png",
@@ -354,6 +337,176 @@
       "language": "AL",
       "author": {
         "authorName": "Colleen Hoover",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Qeshja nen trekembeshin e varjes",
+      "price": 10.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1699085/qes.jpg",
+      "qty": 19,
+      "publisher": "Botimet Koha",
+      "year": "2021",
+      "dimensions": "140 x 201 x 37",
+      "id": 9882179703632,
+      "orderQty": 1,
+      "description": "Ne kohet kur harreses i ka hipur vlera, Qeshja nen trekembeshin e varjes, shkruar nga Rade Radovanovic e ngre shume lart cmimin e kujteses.",
+      "language": "AL",
+      "author": {
+        "authorName": "Rade Radovanovic",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "The Sublime Object Of Ideology",
+      "price": 21.87,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294830/9781844673001.jpg",
+      "qty": 201,
+      "publisher": "Verso Books",
+      "year": "2009",
+      "dimensions": "195 x 129 x 22",
+      "id": 7536284703023,
+      "orderQty": 1,
+      "description": "Looks at the question of human agency in a postmodern world. This book explores the ideological fantasies of wholeness and exclusion which make up human society.",
+      "language": "EN",
+      "author": {
+        "authorName": "Slavoj Zizek",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Karl Marx: Selected Writings",
+      "price": 77.2,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1312785/9780198782650.jpg",
+      "qty": 111,
+      "publisher": "Oxford University Press",
+      "year": "2000",
+      "dimensions": "244 x 173 x 36",
+      "id": 8743847745210,
+      "orderQty": 1,
+      "description": "Providing a selection of Marx's writings, this book includes extracts from the whole range of Marx's most important pieces. It also includes a bibliography and editorial commentary on each document and provides the background and context of Marx's writing in each period. It is for those wishing for an overview of Marx's political philosophy.",
+      "language": "EN",
+      "author": {
+        "authorName": "Karl Marx",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Procesi",
+      "price": 11.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691547/9789928303073.jpg",
+      "qty": 555,
+      "publisher": "Argeta Lmg",
+      "year": "2019",
+      "dimensions": "129 x 196 x 33",
+      "id": 2171302132381,
+      "orderQty": 1,
+      "description": "E rilexoj \"Procesin\" e Kafkës me admirim edhe më të madh se sa kur e zbulova për herë të parë këtë libër të mrekullueshëm. Sado që është shkruar me shkathtësi, parathënia e Grotisenit nuk më kënaq aspak se na informon për Kafkën në mënyrë të përciptë. Libri i tij i shmanget çdo shpjegimi racional; realizimi i tabllove të tij e zotëron tërë fushën e përfytyrimit dhe nuk di ç 'të admirosh më shumë: përshkrimin \"natyralist\" të një universi fantastik ravijëzimi i hollësishëm e bën të vërtetë në sytë tonë apo guximi bindës i devijimeve deri në çudi. Nga të gjitha këto ke shumë për të mësuar. Ankthi që të përfton ky libër, ka raste që bëhet i padurueshëm dhe njeriu rri e pyet veten parreshtuar: a thua jam unë ai që akuzohet?\" Andre Zhid",
+      "language": "AL",
+      "author": {
+        "authorName": "Franz Kafka",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Femrat",
+      "price": 9.75,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1691466/9789928248480.jpg",
+      "qty": 111,
+      "publisher": "Pegi",
+      "year": "2017",
+      "dimensions": "129 x 197 x 33",
+      "id": 1077247481238,
+      "orderQty": 1,
+      "description": "Shkrimtari i shthurur dhe alkooliku i paepur Henri Çinaski ka lindur për të mbijetuar. Pas dekadash të tëra punësh të papaguara, shkapërderdhje parash me gra dhe baste, edhe Çinaskit më së fundi i ndrin ylli i tij letrar. Në këtë furi fame dhe alkooli, Bukowski rrëfen haptas dhe pa asnjë nënkuptim një pasion magjepsës të tij: gratë dhe aventurat e tij të dashurisë, të vërteta apo të sajuara qofshin. Për të, ato janë burim i përhershëm tërheqjeje, një nevojë që nuk njeh prehje dhe nuk ndalet as para situatash nga më të pavolitshmet, më të turpshmet apo më të neveritshmet. Disa gra duan pak a shumë atë që do dhe ai – seksin e thjeshtë, pa komplikime – disa duan ta ndryshojnë, disa duan të kenë një lidhje normale me të e të pakta janë ato që duket se nuk mund ta pranojnë paaftësinë e tij për të mos fjetur me shumicën e grave që takon. Kërkimi i tij nuk resht përpara asgjëje, ndoshta sepse dashuria dhe lufta mes sekseve janë mjeti më i sigurt për shkrimtarin amerikan për të ruajtur lidhjet me realitetin.",
+      "language": "AL",
+      "author": {
+        "authorName": "Charles Bukowski",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Betting On The Muse",
+      "price": 13.33,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1293356/9781574230017.jpg",
+      "qty": 122,
+      "publisher": "Ecco Press",
+      "year": "1996",
+      "dimensions": "226 x 150 x 28",
+      "id": 466567515205,
+      "orderQty": 1,
+      "description": "Betting on the Muse is a combination of hilarious poetry and stories. Charles Bukowski writes about the real life of a working man and all that comes with it.",
+      "language": "EN",
+      "author": {
+        "authorName": "Charles Bukowski",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "Belt",
+      "price": 11.11,
+      "src": "https://m.media-amazon.com/images/I/41K2D0T8ZSL._AC_SY780_.jpg",
+      "qty": 11,
+      "publisher": "Saqi Books",
+      "year": "2002",
+      "dimensions": "210 x 137 x 12",
+      "id": 3513445801980,
+      "orderQty": 1,
+      "description": "Ahmed grows up in a small Saudi village steeped in traditional tribal culture, local legends, family ties, history, and tribal songs. He struggles to come to terms with this unfolding world without forsaking his village, family or Hizam, the old man who comes to epitomise the traditional life itself.",
+      "language": "EN",
+      "author": {
+        "authorName": "Abodehman, Ahmed",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": "100 Best Loved Poems ",
+      "price": 3.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1288990/9780486285535.jpg",
+      "qty": 11,
+      "publisher": "Dover Publications",
+      "year": "1995",
+      "dimensions": "129 x 195 x 35",
+      "id": 5784157434125,
+      "orderQty": 1,
+      "description": "Popular, well-known poetry: \"The Passionate Shepherd to His Love,\" \"Shall I compare thee to a summer's day?\" \"Death, be not proud,\" \"The Raven,\" \"The Road Not Taken,\" plus works by Blake, Wordsworth, Byron, Coleridge, Shelley, Emerson, Browning, Keats, Kipling, Sandburg, Pound, Auden, Thomas, and many others. Includes 13 selections from the Common Core State Standards Initiative: \"Stopping by the Woods on a Snowy Evening,\" \"Fog,\" \"Chicago,\" \"Jabberwocky,\" \"O Captain! My Captain!\" \"The Road Not Taken,\" \"Musee des Beaux Arts,\" \"Ozymandias,\" \"Sonnet 73,\" \"The Raven,\" \"Because I Could Not Stop for Death,\" \"Ode on a Grecian Urn,\" and \"The River Merchant's Wife: A Letter.\"",
+      "language": "EN",
+      "author": {
+        "authorName": "Philip Smith",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " A Little Life ",
+      "price": 12.99,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1291949/9781447294832.jpg",
+      "qty": 11,
+      "publisher": "Pan Macmillan ",
+      "year": "2017",
+      "dimensions": "196 x 130 x 46",
+      "id": 6800451313711,
+      "orderQty": 1,
+      "description": "A novel of extraordinary intelligence and heart, a masterful depiction of heartbreak, and a dark and haunting examination of the tyranny of experience and memory.",
+      "language": "EN",
+      "author": {
+        "authorName": "Hanya Yanagihara",
+        "aboutAuthor": ""
+      }
+    },
+    {
+      "title": " Where The Crawdads Sing",
+      "price": 11.77,
+      "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1292334/9781472154668.jpg",
+      "qty": 111,
+      "publisher": "Little Brown Book Group",
+      "year": "2019",
+      "dimensions": "127 x 197 x 27",
+      "id": 9023203935581,
+      "orderQty": 1,
+      "description": "Perfect for fans of Barbara Kingsolver and Celeste Ng, Where the Crawdads Sing is at once an exquisite ode to the natural world, a heartbreaking coming-of-age story, and a surprising tale of possible murder.",
+      "language": "EN",
+      "author": {
+        "authorName": "Delia Owens",
         "aboutAuthor": ""
       }
     }

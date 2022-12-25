@@ -6,6 +6,7 @@ import Slider from "./components/Slider";
 import Footer from "./components/Footer";
 import BackTop from "./components/BackTop";
 import Cards from "./components/Cards";
+
 import "./App.css";
 
 const App = ({

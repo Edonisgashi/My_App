@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import { db } from "../firebase";
+import { ref, set, push } from "firebase/database";
 const AddABook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -36,6 +37,7 @@ const AddABook = () => {
       orderQty: 1,
       description: description,
       language: language,
+
       author: {
         authorName: author,
         aboutAuthor: aboutAuthor,
@@ -51,6 +53,30 @@ const AddABook = () => {
       .then((response) => response.json())
       .then((resp) => console.log(resp))
       .catch((error) => console.log(error));
+
+    // const reference = ref(db, "books");
+    // const newBook = push(reference);
+    // set(
+    //   newBook,
+    //   {
+    //     title: title,
+    //     price: Number(price),
+    //     src: src,
+    //     qty: Number(qty),
+    //     publisher: publisher,
+    //     year: year,
+    //     dimensions: dimensions,
+    //     id: Number(randomId),
+    //     orderQty: 1,
+    //     description: description,
+    //     language: language,
+
+    //     author: {
+    //       authorName: author,
+    //       aboutAuthor: aboutAuthor,
+    //     },
+    //   }()
+    // );
   };
   useEffect(() => {
     if (loader) {
@@ -60,6 +86,7 @@ const AddABook = () => {
 
   return (
     <>
+      <Header />
       <Link to="/dashboard" className="btn btn-primary m-2 p-3">
         <AiOutlineArrowLeft />
       </Link>

@@ -7,7 +7,7 @@ const Slider = () => {
     objectFit: "fill",
   };
   return (
-    <Carousel className="slider w-100 my-1 mx-auto rounded shadow-lg">
+    <Carousel className="slider w-100 my-5 mx-auto rounded shadow-lg">
       <Carousel.Item>
         <img
           className="d-block w-100 "
