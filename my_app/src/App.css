@@ -131,6 +131,10 @@ img .d-block {
   .register__container {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+  }
+  .register__container .form {
+    min-width: fit-content;
   }
   .form-row {
     display: flex;
@@ -170,11 +174,7 @@ img .d-block {
     right: 0;
     padding: 1.5rem;
     margin-bottom: 1rem;
-<<<<<<< HEAD
     background-color: #f8f9fa;
-=======
-    background-color: #dc3545;
->>>>>>> origin/main
     opacity: 0.5;
   }
   .card__bottom {

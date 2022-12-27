@@ -6,14 +6,14 @@ import Footer from "./Footer";
 const AlBooks = ({ addToCartBtn, cartLength }) => {
   const [alBook, setAlBook] = useState([]);
   const [loader, setLoader] = useState(false);
-  const API = "http://localhost:3000/books";
+  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const fetchData = async () => {
-    const retrievedData = await fetch(API)
+    const retrievedData = await fetch(`${API}/books.json`)
       .then((retrieved) => retrieved.json())
       .then((retrDt) => {
         console.log(retrDt);
-        setAlBook(retrDt);
+        setAlBook(Object.values(retrDt));
         setLoader(true);
       })
       .catch((err) => console.log(err));

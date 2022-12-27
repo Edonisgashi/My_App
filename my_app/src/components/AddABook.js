@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { db } from "../firebase";
-import { ref, set, push } from "firebase/database";
+
 const AddABook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -18,7 +17,7 @@ const AddABook = () => {
   const [aboutAuthor, setAboutAuthor] = useState("");
   const [loader, setLoader] = useState(false);
   const randomId = Math.floor(Math.random() * 10000000000000).toFixed(0);
-  const API = "http://localhost:3000/books";
+  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const handleForm = (e) => {
     setLoader(true);
@@ -43,7 +42,7 @@ const AddABook = () => {
         aboutAuthor: aboutAuthor,
       },
     };
-    await fetch(API, {
+    await fetch(`${API}/books.json`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -53,30 +52,6 @@ const AddABook = () => {
       .then((response) => response.json())
       .then((resp) => console.log(resp))
       .catch((error) => console.log(error));
-
-    // const reference = ref(db, "books");
-    // const newBook = push(reference);
-    // set(
-    //   newBook,
-    //   {
-    //     title: title,
-    //     price: Number(price),
-    //     src: src,
-    //     qty: Number(qty),
-    //     publisher: publisher,
-    //     year: year,
-    //     dimensions: dimensions,
-    //     id: Number(randomId),
-    //     orderQty: 1,
-    //     description: description,
-    //     language: language,
-
-    //     author: {
-    //       authorName: author,
-    //       aboutAuthor: aboutAuthor,
-    //     },
-    //   }()
-    // );
   };
   useEffect(() => {
     if (loader) {

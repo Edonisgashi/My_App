@@ -1,18 +1,20 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCVR7JTN6eH6Gvwj00qbInI5LeKyUQNUNw",
-  authDomain: "ebookstore-44d5d.firebaseapp.com",
-  databaseURL: "https://ebookstore-44d5d-default-rtdb.firebaseio.com",
-  projectId: "ebookstore-44d5d",
-  storageBucket: "ebookstore-44d5d.appspot.com",
-  messagingSenderId: "274762480979",
-  appId: "1:274762480979:web:db1d1f4937fe97493675a6",
-  measurementId: "G-SC9LXXYNCL",
+const StartFirebase = () => {
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJ-tG0uokKccFKnHozdX1z_bCat4ADAGk",
+    authDomain: "ebookstore-4281b.firebaseapp.com",
+    databaseURL: "https://ebookstore-4281b-default-rtdb.firebaseio.com",
+    projectId: "ebookstore-4281b",
+    storageBucket: "ebookstore-4281b.appspot.com",
+    messagingSenderId: "596797585802",
+    appId: "1:596797585802:web:658152984e04e2d7893073",
+  };
+
+  const app = initializeApp(firebaseConfig);
+
+  return getDatabase(app);
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export const db = getDatabase();
+export default StartFirebase;

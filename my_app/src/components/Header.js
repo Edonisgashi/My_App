@@ -14,6 +14,7 @@ const Header = ({ cartLength }) => {
   const loggedIn = window.localStorage.getItem("isLoggedIn");
   console.log(loggedIn);
   const currentUser = JSON.parse(loggedIn);
+  console.log(currentUser);
   const signOut = () => {
     window.localStorage.removeItem("isLoggedIn");
   };

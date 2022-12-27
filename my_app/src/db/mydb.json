@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "title": "Homo Deus A Brief History Of Tomorrow",
+      "title": "Homo Deus A Brief History Of Tomorrow...",
       "price": 20,
       "src": "https://d11udzuu2adwwu.cloudfront.net/covers/1294051/9781784703936.jpg",
       "qty": 200,
@@ -526,6 +526,71 @@
         "authorName": "Jeremy Dronfield",
         "aboutAuthor": ""
       }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Edonis",
+      "lastName": "Gashi",
+      "role": "admin",
+      "email": "edonisgashi@outlook.com",
+      "username": "edonisgashi",
+      "password": "123456789"
+    },
+    {
+      "id": "226505",
+      "firstName": "Nebih",
+      "lastName": "Miftari",
+      "role": "user",
+      "email": "nebihmiftari@example.com",
+      "username": "nebihmiftari",
+      "password": "11111111"
+    },
+    {
+      "id": "807031",
+      "firstName": "Vigan",
+      "lastName": "Berisha",
+      "role": "user",
+      "email": "viganberisha@example.com",
+      "username": "viganberisha",
+      "password": "00000000"
+    },
+    {
+      "id": "839343",
+      "firstName": "Florind",
+      "lastName": "Latifi",
+      "role": "user",
+      "email": "florindlatifi@example.com",
+      "username": "florindlatifi",
+      "password": "00000000"
+    },
+    {
+      "id": "752033",
+      "firstName": "Besiana",
+      "lastName": "Syla",
+      "role": "user",
+      "email": "besianasyla@example.com",
+      "username": "besianasyla",
+      "password": "0000"
+    },
+    {
+      "id": "307981",
+      "firstName": "Aulona",
+      "lastName": "Nikci",
+      "role": "user",
+      "email": "aulonanikci@example.com",
+      "username": "aulonanikci",
+      "password": "0000"
+    },
+    {
+      "id": "868662",
+      "firstName": "Filan",
+      "lastName": "Fisteku",
+      "role": "user",
+      "email": "filanfisteku@example.com",
+      "username": "filanfisteku",
+      "password": "0000"
     }
   ]
 }

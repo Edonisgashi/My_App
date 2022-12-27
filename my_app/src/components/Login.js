@@ -11,12 +11,12 @@ const Login = () => {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
-  const API = "http://localhost:3001/users";
+  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const users = async () => {
-    await fetch(API)
+    await fetch(`${API}/users.json`)
       .then((response) => response.json())
       .then((resp) => {
-        setAccounts(resp);
+        setAccounts(Object.values(resp));
         setLoader(true);
       })
       .catch((error) => console.log(error));

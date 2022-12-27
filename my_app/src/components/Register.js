@@ -15,7 +15,7 @@ const Register = () => {
   const [checked, setChecked] = useState(false);
   const [incomingData, setIncomingData] = useState(false);
   const [registeredUser, setRegisteredUser] = useState();
-  const API = "http://localhost:3001/users";
+  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const randomId = Math.floor(Math.random() * 1000000).toFixed(0);
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -32,7 +32,7 @@ const Register = () => {
       password: password,
     };
 
-    await fetch(API, {
+    await fetch(`${API}/users.json`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -40,18 +40,19 @@ const Register = () => {
       },
     })
       .then((resp) => resp.json())
-      .then((data) => setRegisteredUser(data))
+      .then((resp) => setRegisteredUser(data))
       .catch((err) => console.log(err));
   };
+
+  console.log(registeredUser);
   const handleSubmit = (e) => {
     e.preventDefault();
     setIncomingData(true);
+    sendData();
+    console.log(registeredUser);
   };
-
+  console.log(registeredUser);
   useEffect(() => {
-    if (incomingData && !registeredUser) {
-      sendData();
-    }
     if (registeredUser) {
       window.localStorage.setItem("isLoggedIn", JSON.stringify(registeredUser));
       navigate("/");

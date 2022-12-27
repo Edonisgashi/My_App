@@ -4,17 +4,17 @@ import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 
-
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [updateRequest, setUpdateRequest] = useState(false);
   const [dataToUpdate, setDataToUpdate] = useState();
-  const [bookID, setBookID] = useState();
+  const [bookToUpdate, setBookToUpdate] = useState([]);
+  const [dataToDelete, setDataToDelete] = useState();
   const formRef = useRef(null);
-  const API = "http://localhost:3000/books";
+  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const fetchData = async () => {
-    await fetch(API)
+    await fetch(`${API}/books.json`)
       .then((response) => response.json())
       .then((resp) => {
         setData(resp);
@@ -25,46 +25,55 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchData();
-  }, [data]);
+  }, []);
 
   const handleEditBtn = (e, id) => {
     e.preventDefault();
-    setBookID(id);
-    setUpdateRequest(true);
 
-    fetch(`${API}/${id}`)
-      .then((response) => response.json())
-      .then((resp) => {
-        console.log(resp);
-        setDataToUpdate(resp);
-      });
+    setUpdateRequest(true);
+    setDataToUpdate(Object.values(data).find((book) => book.id === id));
+    console.log(dataToUpdate);
+    setBookToUpdate(
+      Object.entries(data).find((book) => book[1].id === dataToUpdate.id)
+    );
+    console.log(bookToUpdate);
     formRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleUpdateForm = (e) => {
     e.preventDefault();
 
-    fetch(`${API}/${bookID}`, {
-      method: "PUT",
-      body: JSON.stringify(dataToUpdate),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((resp) => {
-        console.log(resp);
+    if (bookToUpdate) {
+      console.log(`${API}/books/${bookToUpdate[0]}.json`);
+      fetch(`${API}/books/${bookToUpdate[0]}.json`, {
+        method: "PUT",
+        body: JSON.stringify(bookToUpdate[1]),
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((error) => console.log(error));
+        .then((response) => response.json())
+        .then((resp) => {
+          console.log(resp);
+        })
+        .catch((error) => console.log(error));
+    }
   };
   const handleDeleteBtn = (e, id) => {
     e.preventDefault();
-    console.log(id);
-    fetch(`${API}/${id}`, {
-      method: "DELETE",
-    });
-  };
+    setDataToDelete(
+      data ? Object.entries(data).find((book) => book[1].id == id) : null
+    );
 
+    if (dataToDelete) {
+      fetch(`${API}/books/${dataToDelete[0]}.json`, {
+        method: "DELETE",
+      })
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
+    }
+  };
+  console.log(data);
   return (
     <div className="w-100" style={{ fontFamily: "'Rubik', sans-serif" }}>
       <Header />
@@ -90,37 +99,39 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((el, i) => {
-                return (
-                  <tr key={i}>
-                    <td className="p-3">{el.title}</td>
-                    <td className="p-3">{el.author.authorName}</td>
-                    <td className="p-3">{el.price}</td>
-                    <td className="p-3 justify-content-center btns">
-                      <button
-                        className="mx-3 btn btn-info px-4"
-                        onClick={(e) => handleEditBtn(e, el.id)}
-                      >
-                        <GrEdit />
-                      </button>
+              {data
+                ? Object.values(data).map((el, i) => {
+                    return (
+                      <tr key={i}>
+                        <td className="p-3">{el.title}</td>
+                        <td className="p-3">{el.author.authorName}</td>
+                        <td className="p-3">{el.price}</td>
+                        <td className="p-3 justify-content-center btns">
+                          <button
+                            className="mx-3 btn btn-info px-4"
+                            onClick={(e) => handleEditBtn(e, el.id)}
+                          >
+                            <GrEdit />
+                          </button>
 
-                      <button
-                        className="btn btn-danger px-4"
-                        onClick={(e) => handleDeleteBtn(e, el.id)}
-                      >
-                        <MdOutlineDelete />
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
+                          <button
+                            className="btn btn-danger px-4"
+                            onClick={(e) => handleDeleteBtn(e, el.id)}
+                          >
+                            <MdOutlineDelete />
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })
+                : null}
             </tbody>
           </table>
         ) : (
           <h2>Sorry , there was a problem with loading data</h2>
         )}
       </section>
-      {updateRequest && dataToUpdate ? (
+      {updateRequest && dataToUpdate && bookToUpdate.length > 0 ? (
         <>
           <div className="w-50  my-1 mx-auto shadow-lg p-3">
             <h2 className="bg-danger bg-opacity-25 py-3 text-center">
@@ -133,12 +144,13 @@ const Dashboard = () => {
                   type="text"
                   className="form-control my-1"
                   id="bookTitle"
-                  value={dataToUpdate.title}
+                  defaultValue={bookToUpdate[1].title}
                   aria-describedby="emailHelp"
                   placeholder="Enter Book Title"
                   required
                   onChange={(e) => {
-                    dataToUpdate.title = e.target.value;
+                    bookToUpdate[1].title = e.target.value;
+                    console.log(e.target.value);
                   }}
                 />
               </div>
@@ -149,12 +161,12 @@ const Dashboard = () => {
                   type="text"
                   className="form-control my-1"
                   id="bookAuthor"
-                  value={dataToUpdate.author.authorName}
+                  defaultValue={bookToUpdate[1].author.authorName}
                   placeholder="Enter Author/s name"
                   required
-                  onChange={(e) => {
-                    dataToUpdate.author.authorName = e.target.value;
-                  }}
+                  onChange={(e) =>
+                    (bookToUpdate[1].author.authorName = e.target.value)
+                  }
                 />
               </div>
               <div className="form-group p-3 my-1">
@@ -165,11 +177,11 @@ const Dashboard = () => {
                   step="0.01"
                   className="form-control my-1"
                   id="bookPrice"
-                  value={dataToUpdate.price}
+                  defaultValue={bookToUpdate[1].price}
                   placeholder="Enter Price"
                   required
                   onChange={(e) => {
-                    dataToUpdate.price = Number(e.target.value);
+                    bookToUpdate[1].price = Number(e.target.value);
                   }}
                 />
               </div>
@@ -177,7 +189,7 @@ const Dashboard = () => {
                 <label htmlFor="bookYear">Year </label>
                 <input
                   type="number"
-                  value={dataToUpdate.year}
+                  defaultValue={bookToUpdate[1].year}
                   min="100"
                   step="1"
                   className="form-control my-1"
@@ -185,7 +197,7 @@ const Dashboard = () => {
                   placeholder="Enter Year"
                   required
                   onChange={(e) => {
-                    dataToUpdate.year = Number(e.target.value);
+                    bookToUpdate[1].year = Number(e.target.value);
                   }}
                 />
               </div>
@@ -195,11 +207,11 @@ const Dashboard = () => {
                   type="text"
                   className="form-control my-1"
                   id="bookPhoto"
-                  value={dataToUpdate.src}
+                  defaultValue={bookToUpdate[1].src}
                   placeholder="Enter URL"
                   required
                   onChange={(e) => {
-                    dataToUpdate.src = e.target.value;
+                    bookToUpdate[1].src = e.target.value;
                   }}
                 />
               </div>
@@ -207,7 +219,7 @@ const Dashboard = () => {
                 <label htmlFor="bookQty">Quantity </label>
                 <input
                   type="number"
-                  value={dataToUpdate.qty}
+                  defaultValue={bookToUpdate[1].qty}
                   min="0"
                   step="1"
                   className="form-control my-1"
@@ -215,7 +227,7 @@ const Dashboard = () => {
                   placeholder="Enter Qty"
                   required
                   onChange={(e) => {
-                    dataToUpdate.qty = Number(e.target.value);
+                    bookToUpdate[1].qty = Number(e.target.value);
                   }}
                 />
               </div>
@@ -223,12 +235,12 @@ const Dashboard = () => {
                 <label htmlFor="bookDescription">Book Description </label>
                 <input
                   type="text"
-                  value={dataToUpdate.description}
+                  defaultValue={bookToUpdate[1].description}
                   className="form-control my-1"
                   id="bookDescription"
                   placeholder="Description of book"
                   onChange={(e) => {
-                    dataToUpdate.description = e.target.value;
+                    bookToUpdate[1].description = e.target.value;
                   }}
                 />
               </div>
@@ -238,10 +250,10 @@ const Dashboard = () => {
                   type="text"
                   className="form-control my-1"
                   id="bookPublisher"
-                  value={dataToUpdate.publisher}
+                  defaultValue={bookToUpdate[1].publisher}
                   placeholder="Enter Publisher"
                   onChange={(e) => {
-                    dataToUpdate.publisher = e.target.value;
+                    bookToUpdate[1].publisher = e.target.value;
                   }}
                 />
               </div>
@@ -251,10 +263,10 @@ const Dashboard = () => {
                   type="text"
                   className="form-control my-1"
                   id="bookPublisher"
-                  value={dataToUpdate.dimensions}
+                  defaultValue={bookToUpdate[1].dimensions}
                   placeholder="E.g 129 x 196 x 33"
                   onChange={(e) => {
-                    dataToUpdate.dimensions = e.target.value;
+                    bookToUpdate[1].dimensions = e.target.value;
                   }}
                 />
               </div>
@@ -266,9 +278,9 @@ const Dashboard = () => {
                     type="radio"
                     name="EN"
                     id="EN"
-                    value="EN"
+                    defaultValue="EN"
                     onChange={() => {
-                      dataToUpdate.language = "EN";
+                      bookToUpdate[1].language = "EN";
                     }}
                   />
                   <label className="form-check-label" htmlFor="EN">
@@ -281,9 +293,9 @@ const Dashboard = () => {
                     type="radio"
                     name="AL"
                     id="AL"
-                    value="AL"
+                    defaultValue="AL"
                     onChange={() => {
-                      dataToUpdate.language = "AL";
+                      bookToUpdate[1].language = "AL";
                     }}
                   />
                   <label className="form-check-label" htmlFor="AL">
@@ -292,17 +304,15 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="form-group p-3 my-1">
-                <label htmlFor="bookAuthorDescription">
-                  Some words Author{" "}
-                </label>
+                <label htmlFor="bookAuthorDescription">Some words Author</label>
                 <input
                   type="text"
                   className="form-control my-1"
                   id="bookAuthorDescription"
-                  value={dataToUpdate.aboutAuthor}
+                  defaultValue={bookToUpdate[1].aboutAuthor}
                   placeholder="Enter a quick description about author"
                   onChange={(e) => {
-                    dataToUpdate.author.authorName = e.target.value;
+                    bookToUpdate[1].author.authorName = e.target.value;
                   }}
                 />
               </div>
