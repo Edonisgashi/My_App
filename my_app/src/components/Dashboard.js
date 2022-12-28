@@ -133,11 +133,15 @@ const Dashboard = () => {
       </section>
       {updateRequest && dataToUpdate && bookToUpdate.length > 0 ? (
         <>
-          <div className="w-50  my-1 mx-auto shadow-lg p-3">
+          <div className="w-75 my-1 mx-auto shadow-lg p-3">
             <h2 className="bg-danger bg-opacity-25 py-3 text-center">
               Update Book
             </h2>
-            <form onSubmit={(e) => handleUpdateForm(e)} ref={formRef}>
+            <form
+              onSubmit={(e) => handleUpdateForm(e)}
+              ref={formRef}
+              className="update__form"
+            >
               <div className="form-group p-3 my-1">
                 <label htmlFor="bookTitle">Book Title</label>
                 <input

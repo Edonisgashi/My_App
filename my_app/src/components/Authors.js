@@ -35,16 +35,11 @@ const Authors = () => {
   return (
     <>
       <Header />
-      <section className="authors__container w-75 row d-flex align-items-center justify-content-center">
+      <section className="authors__container row d-flex w-100 flex-row flex-wrap-wrap my-5 mx-2">
         {uniqueAuthor.map((el, i) => {
           return (
-            <Link className="author my-5 text-muted px-auto py-4 text-center d-flex justify-content-start align-items-center col-3 text-decoration-none ">
-              {" "}
-              <CgProfile
-                style={{ transform: "scale(2.5)" }}
-                className="mx-4 my-auto"
-              />{" "}
-              <h2 className="authorname"> {el.authorName}</h2>
+            <Link className="author col-12 col-lg-2 m-2" to="/authorbooks">
+              <h2>{el.authorName}</h2>
             </Link>
           );
         })}

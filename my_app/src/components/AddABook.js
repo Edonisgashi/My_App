@@ -65,9 +65,12 @@ const AddABook = () => {
       <Link to="/dashboard" className="btn btn-primary m-2 p-3">
         <AiOutlineArrowLeft />
       </Link>
-      <div className="w-50  my-1 mx-auto shadow-lg p-3">
+      <div className="row  my-1 mx-auto shadow-lg p-3">
         <h2 className="bg-danger bg-opacity-25 py-3 text-center">Add Book</h2>
-        <form onSubmit={(e) => handleForm(e)}>
+        <form
+          onSubmit={(e) => handleForm(e)}
+          className="col-12 col-md-8 mx-auto"
+        >
           <div className="form-group p-3 my-1">
             <label htmlFor="bookTitle">Book Title</label>
             <input

@@ -34,13 +34,13 @@ const Product = ({ addToCartBtn }) => {
       <Header />
       <BackTop />
       {loader && selectedBook !== null ? (
-        <div className="product d-flex  m-5  p-5 w-75">
+        <div className="product row d-flex  m-5  p-5 w-75">
           <img
-            className="w-25"
+            className="col-8 col-lg-3"
             src={selectedBook.src}
             alt={selectedBook.title}
           />
-          <div className="text-muted d-flex flex-column mx-5">
+          <div className="text-muted d-flex flex-column align-items-start justify-content-evenly mx-5">
             <h2 className="my-3">{selectedBook.title}</h2>
             <h3 className="my-3">{selectedBook.author.authorName}</h3>
             <h3 className="mb-3 text-danger">

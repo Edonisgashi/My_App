@@ -68,9 +68,10 @@ body {
   width: 70%;
   transition: all 0.3s ease-in-out;
 }
-.author--container:hover {
-  transform: scale(0.95);
+.author h2 {
+  font-size: 22px;
 }
+
 .text-decoration-none {
   transition: all 0.33s ease-in;
 }
@@ -97,9 +98,16 @@ img .d-block {
   }
   .card {
     width: 100%;
+    font-size: smaller;
     margin: 1.99rem auto;
     padding: 1.2rem;
     transition: margin-top 0.5s;
+  }
+  .post__container {
+    width: 100%;
+  }
+  .card button {
+    min-width: fit-content;
   }
   .icon--group {
     width: 70%;
