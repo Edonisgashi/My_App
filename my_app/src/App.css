@@ -84,6 +84,9 @@ img .d-block {
 }
 
 @media only screen and (max-width: 991px) {
+  * {
+    font-size: small;
+  }
   .header {
     width: 100%;
   }

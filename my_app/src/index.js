@@ -25,7 +25,7 @@ import "./index.css";
 import AddABook from "./components/AddABook";
 import Dashboard from "./components/Dashboard";
 import OrderMessage from "./components/OrderMessage";
-
+import BookByAuthor from "./components/BookByAuthor";
 const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartLength, setCartLength] = useState();
@@ -67,6 +67,10 @@ const Index = () => {
           />
           <Route path="/ordermessage" element={<OrderMessage />} />
           <Route path="/login" element={<Login />} />
+          <Route
+            path="/authorbooks/:name"
+            element={<BookByAuthor addToCartBtn={addToCartBtn} />}
+          />
           <Route path="/cart" element={<Cart cart={cart} />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/dashboard" element={<Dashboard />} />

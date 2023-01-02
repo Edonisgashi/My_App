@@ -34,9 +34,9 @@ const Product = ({ addToCartBtn }) => {
       <Header />
       <BackTop />
       {loader && selectedBook !== null ? (
-        <div className="product row d-flex  m-5  p-5 w-75">
+        <div className="row m-5  p-5 w-75">
           <img
-            className="col-8 col-lg-3"
+            className="col-8 col-lg-3 mx-5"
             src={selectedBook.src}
             alt={selectedBook.title}
           />
@@ -53,10 +53,18 @@ const Product = ({ addToCartBtn }) => {
             >
               Add to Cart
             </button>
-            <span>Publisher :{selectedBook.publisher}</span>
-            <span>Year : {selectedBook.year}</span>
-            <span>Dimensions : {selectedBook.dimensions}</span>
-            <span>QTY : {selectedBook.qty}</span>
+            <span className="my-1">
+              <b>Publisher</b> :{selectedBook.publisher}
+            </span>
+            <span className="my-1">
+              <b>Year</b> : {selectedBook.year}
+            </span>
+            <span className="my-1">
+              <b>Dimensions</b> : {selectedBook.dimensions}
+            </span>
+            <span className="my-1">
+              <b>QTY</b> : {selectedBook.qty}
+            </span>
           </div>
         </div>
       ) : null}
