@@ -54,14 +54,16 @@ const Product = ({ addToCartBtn }) => {
               Add to Cart
             </button>
             <span className="my-1">
-              <b>Publisher</b> :{selectedBook.publisher}
+              <b>Publisher</b> : {selectedBook.publisher}
             </span>
             <span className="my-1">
               <b>Year</b> : {selectedBook.year}
             </span>
-            <span className="my-1">
-              <b>Dimensions</b> : {selectedBook.dimensions}
-            </span>
+            {selectedBook.dimensions && selectedBook.dimensions !== "N/A" ? (
+              <span className="my-1">
+                <b>Dimensions</b> : {selectedBook.dimensions}
+              </span>
+            ) : null}
             <span className="my-1">
               <b>QTY</b> : {selectedBook.qty}
             </span>

@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
 import BackTop from "./components/BackTop";
 import Cards from "./components/Cards";
-import StartFirebase from "./firebase";
-import * as firebase from "firebase/app";
+import Search from "./components/Search";
 import "./App.css";
 
 const App = ({
@@ -37,7 +35,15 @@ const App = ({
   useEffect(() => {
     fetchData();
   }, [loaded]);
-
+  const searchByName = (e, name) => {
+    console.log(name);
+    const searchedArr = book.filter((book) => book.title.match(name));
+    if (name !== "") {
+      setBook(searchedArr);
+    } else {
+      setBook(book);
+    }
+  };
   const showDetails = (e, id) => {
     e.preventDefault();
 
@@ -59,6 +65,7 @@ const App = ({
     <>
       <Header cartLength={cartLength} />
       <Slider />
+      <Search searchByName={searchByName} />
 
       <BackTop />
       <div className="cardContainer  my-5 mx-auto">

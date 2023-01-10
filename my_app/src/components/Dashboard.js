@@ -13,6 +13,7 @@ const Dashboard = () => {
   const [dataToDelete, setDataToDelete] = useState();
   const formRef = useRef(null);
   const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
+
   const fetchData = async () => {
     await fetch(`${API}/books.json`)
       .then((response) => response.json())
@@ -74,6 +75,7 @@ const Dashboard = () => {
     }
   };
   console.log(data);
+
   return (
     <div className="w-100" style={{ fontFamily: "'Rubik', sans-serif" }}>
       <Header />
@@ -126,6 +128,20 @@ const Dashboard = () => {
                   })
                 : null}
             </tbody>
+            {Object.values(data).length > 0 ? (
+              <tfoot>
+                <tr>
+                  <td>Total Stock in Dollars</td>
+                  <td>
+                    ${" "}
+                    {Object.values(data)
+                      .map((el) => el.price * el.qty)
+                      .reduce((acc, el) => acc + el)
+                      .toLocaleString()}
+                  </td>
+                </tr>
+              </tfoot>
+            ) : null}
           </table>
         ) : (
           <h2>Sorry , there was a problem with loading data</h2>

@@ -29,9 +29,13 @@ const Cart = ({ cart }) => {
   };
   const handleDecrement = (e, id) => {
     setArr((arr) =>
-      arr.map((item) =>
-        id === item.id ? { ...item, orderQty: item.orderQty - 1 } : item
-      )
+      arr.map((item) => {
+        if (id === item.id && item.orderQty > 1) {
+          return { ...item, orderQty: item.orderQty - 1 };
+        }
+
+        return item;
+      })
     );
   };
 
