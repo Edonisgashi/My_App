@@ -35,7 +35,7 @@ const App = ({
   useEffect(() => {
     fetchData();
   }, [loaded]);
-  const searchByName = (e, name) => {
+  const searchByName = (name) => {
     console.log(name);
     const searchedArr = book.filter((book) => book.title.match(name));
     if (name !== "") {

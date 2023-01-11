@@ -16,7 +16,7 @@ const Search = ({ searchByName }) => {
         <button
           className="btn btn-outline-danger my-2 my-sm-0"
           type="submit"
-          onClick={(e) => searchByName(e, searchedBook)}
+          onClick={(e) => searchByName(searchedBook)}
         >
           Search
         </button>

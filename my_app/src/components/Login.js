@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 
 import { Link, useNavigate } from "react-router-dom";
-import { Alert } from "react-bootstrap";
+
 const Login = () => {
   const [accounts, setAccounts] = useState([]);
   const [username, setUsername] = useState("");
@@ -29,25 +29,6 @@ const Login = () => {
     e.preventDefault();
     setCurrentUser(accounts.find((acc) => acc.username === username));
     console.log(typeof currentUser);
-    if (currentUser.password === password) {
-      console.log("Passwords match");
-      console.log(currentUser.role);
-
-      document.querySelector(".link__login").classList.add("d-none");
-      document.querySelector(".link__register").classList.add("d-none");
-
-      if (currentUser.role === "admin") {
-        document.querySelector(".link__dashboard").classList.remove("d-none");
-      } else {
-        document.querySelector(".link__dashboard").classList.add("d-none");
-        document.querySelector(".greet__user").classList.remove("d-none");
-        document.querySelector(
-          ".greet__user"
-        ).textContent = `Hello , ${username}`;
-      }
-    } else {
-      console.log("Passwords do not match");
-    }
   };
   if (currentUser) {
     window.localStorage.setItem("isLoggedIn", JSON.stringify(currentUser));

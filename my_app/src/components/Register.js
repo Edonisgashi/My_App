@@ -51,7 +51,7 @@ const Register = () => {
     sendData();
     console.log(registeredUser);
   };
-  console.log(registeredUser);
+
   useEffect(() => {
     if (registeredUser) {
       window.localStorage.setItem("isLoggedIn", JSON.stringify(registeredUser));

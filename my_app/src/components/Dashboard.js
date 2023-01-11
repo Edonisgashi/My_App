@@ -3,6 +3,7 @@ import { GrEdit } from "react-icons/gr";
 import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import BackTop from "./BackTop";
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -45,7 +46,6 @@ const Dashboard = () => {
     e.preventDefault();
 
     if (bookToUpdate) {
-      console.log(`${API}/books/${bookToUpdate[0]}.json`);
       fetch(`${API}/books/${bookToUpdate[0]}.json`, {
         method: "PUT",
         body: JSON.stringify(bookToUpdate[1]),
@@ -79,6 +79,7 @@ const Dashboard = () => {
   return (
     <div className="w-100" style={{ fontFamily: "'Rubik', sans-serif" }}>
       <Header />
+      <BackTop />
       <ul>
         <li className="btn btn-outline-info m-5 p-3">
           <Link className="text-decoration-none" to="/newbook">

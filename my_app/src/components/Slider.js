@@ -12,6 +12,22 @@ const Slider = () => {
         <img
           className="d-block w-100 "
           style={carouselPhotos}
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 "
+          style={carouselPhotos}
+          src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1198&q=80"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 "
+          style={carouselPhotos}
           src="https://s2982.pcdn.co/wp-content/uploads/2021/09/open-book-pages-fanned-out.jpg.optimal.jpg"
           alt="First slide"
         />

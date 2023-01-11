@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cards from "./Cards";
+import BackTop from "./BackTop";
 const EnBooks = ({ addToCartBtn, cartLength }) => {
   const [enBook, setEnBook] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -26,7 +27,7 @@ const EnBooks = ({ addToCartBtn, cartLength }) => {
   return (
     <>
       <Header cartLength={cartLength} />
-
+      <BackTop />
       <div className="cardContainer  my-5 mx-auto">
         {loader
           ? enBooks.map((el, i) => {
