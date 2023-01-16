@@ -32,10 +32,8 @@ const App = ({
   };
   console.log(book);
 
-  useEffect(() => {
-    fetchData();
-  }, [loaded]);
-  const searchByName = (name) => {
+  const searchByName = (e, name) => {
+    e.preventDefault();
     console.log(name);
     const searchedArr = book.filter((book) => book.title.match(name));
     if (name !== "") {
@@ -60,6 +58,9 @@ const App = ({
   };
   const objectAsString = JSON.stringify(loadedBook);
   window.localStorage.setItem("book", objectAsString);
+  useEffect(() => {
+    fetchData();
+  }, [loaded]);
 
   return (
     <>

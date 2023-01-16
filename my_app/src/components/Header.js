@@ -24,10 +24,8 @@ const Header = ({ cartLength }) => {
     links.classList.toggle("hide__menu");
     links.classList.toggle("open__menu");
     if (links.classList.contains("open__menu")) {
-      document.querySelector(".card").classList.add("card__bottom");
       setShownMenu(true);
     } else {
-      document.querySelector(".card").classList.remove("card__bottom");
       setShownMenu(false);
     }
   };

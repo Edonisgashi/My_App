@@ -14,6 +14,7 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
           alt="Card image cap"
         ></img>
       </div>
+      <span className="text-muted">{book.language}</span>
       <div className="card-body d-flex flex-column align-items-center justify-content-between">
         <h2 className="card-title h4" style={{ fontWeight: 600 }}>
           {book.title}

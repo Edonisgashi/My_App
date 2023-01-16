@@ -23,7 +23,7 @@ const Footer = () => {
             </span>{" "}
             E-Books
           </h2>
-          <p className="h6">Copyright &copy; 2023</p>
+          <p className="h6">Copyright &copy; {new Date().getFullYear()}</p>
         </div>
 
         <div className="icon--group">
