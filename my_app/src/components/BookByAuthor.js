@@ -4,15 +4,15 @@ import Cards from "./Cards";
 import Footer from "./Footer";
 import Header from "./Header";
 import { TfiArrowLeft } from "react-icons/tfi";
-
+import API from "../API_URL/API";
 const BookByAuthor = ({ addToCartBtn, showDetails }) => {
   const [bookOfAuthor, setBookOfAuthor] = useState();
-  const API = `https://ebookstore-4281b-default-rtdb.firebaseio.com/books.json`;
+
   const { name } = useParams();
   console.log(name);
 
   const getData = async () => {
-    await fetch(API)
+    await fetch(`${API}/books.json`)
       .then((response) => response.json())
       .then((data) => setBookOfAuthor(Object.values(data)))
       .catch((error) => console.log(error));

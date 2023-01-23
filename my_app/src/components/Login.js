@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-
+import API from "../API_URL/API";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -11,7 +11,6 @@ const Login = () => {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const users = async () => {
     await fetch(`${API}/users.json`)
       .then((response) => response.json())
@@ -37,7 +36,7 @@ const Login = () => {
   return (
     <>
       <Header />
-      <form className="form">
+      <form className="form" onSubmit={(e) => handleSubmit(e)}>
         <div className="form-row align-items-center  w-25 my-5 mx-auto border p-5 bg-dark bg-opacity-25 shadow-lg p-3 mb-5  rounded">
           <div className="col-auto">
             <label className="sr-only my-2" htmlFor="inlineFormInput">
@@ -80,11 +79,7 @@ const Login = () => {
             </div>
           </div>
           <div className="col-auto">
-            <button
-              type="submit"
-              className="btn btn-primary w-50 my-2 mx-auto"
-              onClick={(e) => handleSubmit(e)}
-            >
+            <button type="submit" className="btn btn-primary w-50 my-2 mx-auto">
               Login
             </button>
           </div>

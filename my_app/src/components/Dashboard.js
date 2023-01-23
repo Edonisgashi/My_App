@@ -4,7 +4,7 @@ import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import BackTop from "./BackTop";
-
+import API from "../API_URL/API";
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
@@ -13,7 +13,6 @@ const Dashboard = () => {
   const [bookToUpdate, setBookToUpdate] = useState([]);
   const [dataToDelete, setDataToDelete] = useState();
   const formRef = useRef(null);
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const fetchData = async () => {
     await fetch(`${API}/books.json`)

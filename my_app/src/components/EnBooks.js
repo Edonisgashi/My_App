@@ -3,10 +3,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Cards from "./Cards";
 import BackTop from "./BackTop";
+import API from "../API_URL/API";
 const EnBooks = ({ addToCartBtn, cartLength }) => {
   const [enBook, setEnBook] = useState([]);
   const [loader, setLoader] = useState(false);
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const fetchData = async () => {
     const retrievedData = await fetch(`${API}/books.json`)

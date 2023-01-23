@@ -3,15 +3,15 @@ import Header from "./Header";
 import Footer from "./Footer";
 import BackTop from "./BackTop";
 import { useParams } from "react-router-dom";
-
+import API from "../API_URL/API";
 const Product = ({ addToCartBtn }) => {
   const [book, setBook] = useState();
   const [loader, setLoader] = useState(false);
-  const API = `https://ebookstore-4281b-default-rtdb.firebaseio.com/books.json`;
+
   const { id } = useParams();
   console.log(id);
   useEffect(() => {
-    fetch(API)
+    fetch(`${API}/books.json`)
       .then((response) => response.json())
       .then((data) => {
         setBook(Object.values(data));

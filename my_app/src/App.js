@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
@@ -7,18 +7,11 @@ import BackTop from "./components/BackTop";
 import Cards from "./components/Cards";
 import Search from "./components/Search";
 import "./App.css";
-
-const App = ({
-  addToCartBtn,
-  selectedProduct,
-  setSelectedProduct,
-  cartLength,
-}) => {
+import API from "./API_URL/API";
+const App = ({ addToCartBtn, cartLength }) => {
   const [book, setBook] = useState([]);
   const [loaded, setLoader] = useState(false);
   const [loadedBook, setLoadedBook] = useState([]);
-  const [bookID, setBookID] = useState();
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const navigate = useNavigate();
   const fetchData = async () => {
     const retrievedData = await fetch(`${API}/books.json`)

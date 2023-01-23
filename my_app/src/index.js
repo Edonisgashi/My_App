@@ -4,16 +4,7 @@ import App from "./App";
 import Welcome from "./components/Welcome";
 import Cart from "./components/Cart";
 import Product from "./components/Product";
-import {
-  HashRouter,
-  Route,
-  Routes,
-  Link,
-  NavLink,
-  Outlet,
-  useParams,
-  BrowserRouter,
-} from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import EnBooks from "./components/EnBooks";
 import AlBooks from "./components/AlBooks";
 import Authors from "./components/Authors";
@@ -30,11 +21,11 @@ const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartLength, setCartLength] = useState();
   const addToCartBtn = (e, item) => {
+    e.stopPropagation();
     console.log(item);
     cart.push(item);
     setCartLength(cart.length);
     console.log(cart);
-    e.stopPropagation();
   };
   return (
     <>

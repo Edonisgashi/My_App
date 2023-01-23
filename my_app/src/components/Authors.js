@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
+import API from "../API_URL/API";
 const Authors = () => {
   const [author, setAuthor] = useState([]);
   const [loader, setLoader] = useState(false);
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const fetchData = async () => {
     const retrievedData = await fetch(`${API}/books.json`)

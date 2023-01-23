@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import API from "../API_URL/API";
 const AddABook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -17,7 +17,6 @@ const AddABook = () => {
   const [aboutAuthor, setAboutAuthor] = useState("");
   const [loader, setLoader] = useState(false);
   const randomId = Math.floor(Math.random() * 10000000000000).toFixed(0);
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
 
   const handleForm = (e) => {
     setLoader(true);

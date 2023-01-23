@@ -1,7 +1,11 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { BsHeart } from "react-icons/bs";
 const Cards = ({ book, addToCartBtn, showDetails }) => {
+  const addToFavourites = (e, item) => {
+    e.stopPropagation();
+  };
   return (
     <div
       className="card text-center shadow border-0"
@@ -14,7 +18,7 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
           alt="Card image cap"
         ></img>
       </div>
-      <span className="text-muted">{book.language}</span>
+
       <div className="card-body d-flex flex-column align-items-center justify-content-between">
         <h2 className="card-title h4" style={{ fontWeight: 600 }}>
           {book.title}
@@ -42,6 +46,12 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
               Details
             </Button>
           </Link>
+          <button
+            className="btn bg-none"
+            onClick={(e) => addToFavourites(e, book)}
+          >
+            {<BsHeart />}
+          </button>
         </div>
       </div>
     </div>

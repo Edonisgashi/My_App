@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import API from "../API_URL/API";
 const Register = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
@@ -15,7 +16,6 @@ const Register = () => {
   const [checked, setChecked] = useState(false);
   const [incomingData, setIncomingData] = useState(false);
   const [registeredUser, setRegisteredUser] = useState();
-  const API = "https://ebookstore-4281b-default-rtdb.firebaseio.com";
   const randomId = Math.floor(Math.random() * 1000000).toFixed(0);
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -30,6 +30,8 @@ const Register = () => {
       email: email,
       username: username,
       password: password,
+      favourites: { default: true },
+      cart: { default: true },
     };
 
     await fetch(`${API}/users.json`, {
