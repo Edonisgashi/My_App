@@ -41,7 +41,6 @@ const Cards = ({ book, addToCartBtn, showDetails }) => {
             <Button
               variant="outline-danger"
               className="mx-2 align-self-end border-0"
-              onClick={(e) => showDetails(e, book.id)}
             >
               Details
             </Button>

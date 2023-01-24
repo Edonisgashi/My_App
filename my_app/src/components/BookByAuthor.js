@@ -1,29 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import Cards from "./Cards";
 import Footer from "./Footer";
 import Header from "./Header";
 import { TfiArrowLeft } from "react-icons/tfi";
 import API from "../API_URL/API";
+import { DataContext } from "../Context/DataProvider";
 const BookByAuthor = ({ addToCartBtn, showDetails }) => {
   const [bookOfAuthor, setBookOfAuthor] = useState();
-
+  const { data } = useContext(DataContext);
   const { name } = useParams();
-  console.log(name);
 
-  const getData = async () => {
-    await fetch(`${API}/books.json`)
-      .then((response) => response.json())
-      .then((data) => setBookOfAuthor(Object.values(data)))
-      .catch((error) => console.log(error));
-  };
   const bookByAuthor = bookOfAuthor
     ? bookOfAuthor.filter((book) => book.author.authorName === name)
     : null;
-  console.log(bookByAuthor);
+
   useEffect(() => {
-    getData();
-  }, []);
+    setBookOfAuthor(Object.values(data));
+  }, [data]);
   return (
     <>
       <Header />

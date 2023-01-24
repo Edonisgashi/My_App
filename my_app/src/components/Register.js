@@ -46,12 +46,10 @@ const Register = () => {
       .catch((err) => console.log(err));
   };
 
-  console.log(registeredUser);
   const handleSubmit = (e) => {
     e.preventDefault();
     setIncomingData(true);
     sendData();
-    console.log(registeredUser);
   };
 
   useEffect(() => {

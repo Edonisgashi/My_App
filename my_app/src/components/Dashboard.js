@@ -1,43 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { GrEdit } from "react-icons/gr";
 import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import BackTop from "./BackTop";
 import API from "../API_URL/API";
+import { DataContext } from "../Context/DataProvider";
 const Dashboard = () => {
-  const [data, setData] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+  const [book, setBook] = useState([]);
   const [updateRequest, setUpdateRequest] = useState(false);
   const [dataToUpdate, setDataToUpdate] = useState();
   const [bookToUpdate, setBookToUpdate] = useState([]);
   const [dataToDelete, setDataToDelete] = useState();
   const formRef = useRef(null);
 
-  const fetchData = async () => {
-    await fetch(`${API}/books.json`)
-      .then((response) => response.json())
-      .then((resp) => {
-        setData(resp);
-        setLoaded(true);
-      })
-      .catch((error) => console.log(error));
-  };
-
+  const { data } = useContext(DataContext);
   useEffect(() => {
-    fetchData();
-  }, []);
+    setBook(data);
+  }, [data]);
 
   const handleEditBtn = (e, id) => {
     e.preventDefault();
 
     setUpdateRequest(true);
-    setDataToUpdate(Object.values(data).find((book) => book.id === id));
-    console.log(dataToUpdate);
+    setDataToUpdate(Object.values(book).find((book) => book.id === id));
+
     setBookToUpdate(
-      Object.entries(data).find((book) => book[1].id === dataToUpdate.id)
+      Object.entries(book).find((book) => book[1].id === dataToUpdate.id)
     );
-    console.log(bookToUpdate);
+
     formRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -53,16 +44,14 @@ const Dashboard = () => {
         },
       })
         .then((response) => response.json())
-        .then((resp) => {
-          console.log(resp);
-        })
+
         .catch((error) => console.log(error));
     }
   };
   const handleDeleteBtn = (e, id) => {
     e.preventDefault();
     setDataToDelete(
-      data ? Object.entries(data).find((book) => book[1].id == id) : null
+      book ? Object.entries(book).find((book) => book[1].id == id) : null
     );
 
     if (dataToDelete) {
@@ -73,7 +62,6 @@ const Dashboard = () => {
         .catch((error) => console.log(error));
     }
   };
-  console.log(data);
 
   return (
     <div className="w-100" style={{ fontFamily: "'Rubik', sans-serif" }}>
@@ -87,7 +75,7 @@ const Dashboard = () => {
         </li>
       </ul>
       <section className="container">
-        {loaded ? (
+        {book ? (
           <table className="table table-bordered table-striped table-hover align-items-center">
             <thead>
               <tr>
@@ -101,8 +89,8 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {data
-                ? Object.values(data).map((el, i) => {
+              {book
+                ? Object.values(book).map((el, i) => {
                     return (
                       <tr key={i}>
                         <td className="p-3">{el.title}</td>
@@ -128,13 +116,13 @@ const Dashboard = () => {
                   })
                 : null}
             </tbody>
-            {Object.values(data).length > 0 ? (
+            {Object.values(book).length > 0 ? (
               <tfoot>
                 <tr>
                   <td>Total Stock in Dollars</td>
                   <td>
                     ${" "}
-                    {Object.values(data)
+                    {Object.values(book)
                       .map((el) => el.price * el.qty)
                       .reduce((acc, el) => acc + el)
                       .toLocaleString()}
@@ -144,7 +132,7 @@ const Dashboard = () => {
             ) : null}
           </table>
         ) : (
-          <h2>Sorry , there was a problem with loading data</h2>
+          <h2>Sorry , there was a problem with loading book</h2>
         )}
       </section>
       {updateRequest && dataToUpdate && bookToUpdate.length > 0 ? (
@@ -170,7 +158,6 @@ const Dashboard = () => {
                   required
                   onChange={(e) => {
                     bookToUpdate[1].title = e.target.value;
-                    console.log(e.target.value);
                   }}
                 />
               </div>

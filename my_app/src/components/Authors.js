@@ -1,27 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import API from "../API_URL/API";
+import { DataContext } from "../Context/DataProvider";
 const Authors = () => {
   const [author, setAuthor] = useState([]);
-  const [loader, setLoader] = useState(false);
-
-  const fetchData = async () => {
-    const retrievedData = await fetch(`${API}/books.json`)
-      .then((retrieved) => retrieved.json())
-      .then((retrDt) => {
-        // console.log(retrDt);
-        setAuthor(Object.values(retrDt));
-        setLoader(true);
-      })
-      .catch((err) => console.log(err));
-  };
+  const { data } = useContext(DataContext);
 
   useEffect(() => {
-    fetchData();
-  }, []);
-  console.log(author);
+    setAuthor(Object.values(data));
+  }, [data]);
+
   const uniqueAuthor = [
     ...author
       .reduce(
@@ -41,7 +30,7 @@ const Authors = () => {
     }
     return 0;
   });
-  console.log(uniqueAuthor);
+
   return (
     <>
       <Header />

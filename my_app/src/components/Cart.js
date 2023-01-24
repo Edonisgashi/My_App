@@ -6,18 +6,15 @@ const Cart = ({ cart }) => {
   const [arr, setArr] = useState([]);
 
   const transportFee = arr.map((el) => el.price * 0.1 * el.orderQty);
-  console.log(transportFee);
 
   const totalPrice = arr.map((el) => el.price * el.orderQty);
   useEffect(() => {
     setArr([...new Set(cart)]);
   }, [cart]);
-  console.log(arr);
 
   const deleteProduct = (e, i) => {
-    console.log(i);
     const newArr = arr.filter((element, index) => index !== i);
-    console.log(newArr);
+
     setArr(newArr);
   };
   const handleIncrement = (id) => {

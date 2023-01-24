@@ -3,28 +3,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 import BackTop from "./BackTop";
 import { useParams } from "react-router-dom";
-import API from "../API_URL/API";
+import { DataContext } from "../Context/DataProvider";
 const Product = ({ addToCartBtn }) => {
   const [book, setBook] = useState();
-  const [loader, setLoader] = useState(false);
-
+  const { data } = useContext(DataContext);
   const { id } = useParams();
-  console.log(id);
+
   useEffect(() => {
-    fetch(`${API}/books.json`)
-      .then((response) => response.json())
-      .then((data) => {
-        setBook(Object.values(data));
-        setLoader(true);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoader(false);
-      });
-  }, [id]);
-  console.log(book);
+    setBook(Object.values(data));
+  }, [data]);
+
   const selectedBook = book ? book.find((account) => account.id == id) : null;
-  console.log(selectedBook);
+
   if (book === undefined || !book) {
     return <h2>Loading ...</h2>;
   }
@@ -33,7 +23,7 @@ const Product = ({ addToCartBtn }) => {
     <>
       <Header />
       <BackTop />
-      {loader && selectedBook !== null ? (
+      {selectedBook !== null ? (
         <div className="row m-5  p-5 w-75">
           <img
             className="col-8 col-lg-3 mx-5"

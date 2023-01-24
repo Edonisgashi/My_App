@@ -1,26 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Cards from "./Cards";
 import BackTop from "./BackTop";
-import API from "../API_URL/API";
+import { DataContext } from "../Context/DataProvider";
 const EnBooks = ({ addToCartBtn, cartLength }) => {
   const [enBook, setEnBook] = useState([]);
   const [loader, setLoader] = useState(false);
 
-  const fetchData = async () => {
-    const retrievedData = await fetch(`${API}/books.json`)
-      .then((retrieved) => retrieved.json())
-      .then((retrDt) => {
-        console.log(retrDt);
-        setEnBook(Object.values(retrDt));
-        setLoader(true);
-      })
-      .catch((err) => console.log(err));
-  };
+  const { data } = useContext(DataContext);
   useEffect(() => {
-    fetchData();
-  }, []);
+    setEnBook(Object.values(data));
+  }, [data]);
 
   const enBooks = enBook.filter((el) => el.language === "EN");
 
@@ -29,7 +20,7 @@ const EnBooks = ({ addToCartBtn, cartLength }) => {
       <Header cartLength={cartLength} />
       <BackTop />
       <div className="cardContainer  my-5 mx-auto">
-        {loader
+        {enBooks.length > 0
           ? enBooks.map((el, i) => {
               return <Cards key={i} addToCartBtn={addToCartBtn} book={el} />;
             })

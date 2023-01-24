@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,28 +10,24 @@ import { Link } from "react-router-dom";
 
 const Header = ({ cartLength }) => {
   const [shownMenu, setShownMenu] = useState(false);
-
+  const linkRef = useRef(null);
   const loggedIn = window.localStorage.getItem("isLoggedIn");
-  console.log(loggedIn);
+
   const currentUser = JSON.parse(loggedIn);
-  console.log(currentUser);
+
   const signOut = () => {
     window.localStorage.removeItem("isLoggedIn");
   };
 
   const showMenu = (e) => {
-    const links = document.querySelector(".links");
-    links.classList.toggle("hide__menu");
-    links.classList.toggle("open__menu");
-    if (links.classList.contains("open__menu")) {
+    linkRef.current.classList.toggle("hide__menu");
+    linkRef.current.classList.toggle("open__menu");
+    if (linkRef.current.classList.contains("open__menu")) {
       setShownMenu(true);
     } else {
       setShownMenu(false);
     }
   };
-  useEffect(() => {
-    console.log(currentUser);
-  }, []);
 
   return (
     <Navbar
@@ -51,7 +47,10 @@ const Header = ({ cartLength }) => {
         >
           {shownMenu ? <GrClose /> : <GiHamburgerMenu />}
         </button>
-        <div className="links  hide__menu d-lg-flex justify-content-around  w-75 align-items-center ">
+        <div
+          className="links  hide__menu d-lg-flex justify-content-around  w-75 align-items-center "
+          ref={linkRef}
+        >
           <Link to="/enbooks" className="text-decoration-none  text-danger">
             Books in English
           </Link>
