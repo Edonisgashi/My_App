@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { GrEdit } from "react-icons/gr";
 import { MdOutlineDelete } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BackTop from "./BackTop";
 import API from "../API_URL/API";
@@ -14,6 +14,7 @@ const Dashboard = () => {
   const [dataToDelete, setDataToDelete] = useState();
   const formRef = useRef(null);
 
+  const navigate = useNavigate();
   const { data } = useContext(DataContext);
   useEffect(() => {
     setBook(data);

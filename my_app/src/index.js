@@ -18,6 +18,7 @@ import Dashboard from "./components/Dashboard";
 import OrderMessage from "./components/OrderMessage";
 import BookByAuthor from "./components/BookByAuthor";
 import DataProvider from "./Context/DataProvider";
+import ProtectedRoute from "./components/ProtectedRoute";
 const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartLength, setCartLength] = useState();
@@ -26,6 +27,7 @@ const Index = () => {
     cart.push(item);
     setCartLength(cart.length);
   };
+
   return (
     <>
       <DataProvider>
@@ -64,7 +66,10 @@ const Index = () => {
             />
             <Route path="/cart" element={<Cart cart={cart} />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="/dashboard"
+              element={<ProtectedRoute component={Dashboard} />}
+            />
             <Route path="*" element={<NoMatch />} />
           </Routes>
         </HashRouter>
